@@ -1,11 +1,12 @@
 # App Demonstration
 A 2019 Technology Assessment for Kristi Centinaro
 
-This project is meant to demonstrate an example of how to develop a large scale front end application using frameworks and methodology that is prized today.
+This project is meant to demonstrate an example of how to develop a large scale front end application using frameworks and methodology that are prized today.
 In 10 years I hope to look on this fondly, and with a smidgen of PTSD, much like I do my Backbone/Marionette apps ... :)
 
+
 Cheers,
-Kristi Centinaro
+Kristi Centinaro  
 @tnbKristi
 
 ## Live Demo
