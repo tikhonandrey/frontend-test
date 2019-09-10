@@ -17,9 +17,9 @@ Kristi Centinaro
 - CORS proxy enabled for localhost or some equivalent
 
 
-`git clone https://github.com/tnbKristi/demo-app-2019.git`
-`cd demo-app-2019`
-`npm install && npm start`
+`git clone https://github.com/tnbKristi/demo-app-2019.git`  
+`cd demo-app-2019`  
+`npm install && npm start`  
 
 
 ## Frameworks & Technology Used
@@ -45,6 +45,6 @@ Kristi Centinaro
 #### React Doc Generator
 Enables the developer to create documentation that's easy to understand, without writing all kinds of JSDOC comments!
 
-Usage:
+Usage:  
 `npm run docs:gen -- componentfoldername`
 
