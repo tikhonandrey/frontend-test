@@ -1,0 +1,72 @@
+.modal
+  &.modal--closed
+    .modal--container, .modal--backdrop
+      display: none
+      opacity: 0
+
+    .modal-container
+      margin-top: -110%
+
+  &.modal--open
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    .modal--container
+      display: block
+      margin: 10% auto
+
+    .modal--backdrop
+      display: block
+      position: fixed
+      opacity: 1
+
+  .modal--container
+    @include transition(margin-top)
+    position: relative
+    z-index: $index-modal-container
+    margin: auto
+    max-width: 800px
+    min-width: 370px
+
+  .modal--container-inner
+    position: relative
+    background-color: $white
+    height: 600px
+    overflow: hidden
+    border-radius: 14px
+    margin: 12px
+
+  .modal--backdrop
+    @include transition(opacity)
+    z-index: $index-modal-backdrop
+    top: -25%
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $color-modal-backdrop
+
+  .modal--header
+    position: absolute
+    width: 100%
+    text-align: right
+    top: 8px
+    z-index: $index-modal-container + 1
+
+
+    .modal--close-button
+      padding: 6px
+      cursor: pointer
+      color: $color-modal-icon-close
+      text-shadow: 1px 2px 3px $color-modal-icon-shadow
+      @include transition(color)
+
+      &:hover
+        color: $color-link-text-primary-hover
+
+
+  .modal--content

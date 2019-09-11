@@ -1,0 +1,38 @@
+$icon-margin: 4px
+
+.button
+  background-color: $color-button-bg-primary
+  color: $color-button-text-primary
+  display: inline-block
+  height: 42px
+  border-radius: 4px
+  text-align: center
+  font-weight: 600
+  font-size: $font-size-6
+  @include transition(background-color)
+
+  &:hover
+    color: $color-button-text-primary
+    background-color: $color-button-bg-hover-primary
+
+  > span
+    display: inline-block
+    vertical-align: middle
+    line-height: 42px
+
+  &.button--block
+    display: block
+
+  &.button--with-icon
+    i
+      display: inline-block
+      font-size: $font-size-7
+      vertical-align: middle
+
+  &.button--icon-right
+    i
+      margin-left: $icon-margin
+
+  &.button--icon-left
+    i
+      margin-right: $icon-margin

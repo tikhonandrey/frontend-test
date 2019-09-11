@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react", "@typescript-eslint"],
+  "root": true,
+  "rules": {
+    "strict": 0
+  },
+  "globals": {
+    "module": false,
+    "expect": false,
+    "jest": false,
+    "beforeAll": false,
+    "beforeEach": false,
+    "describe": false,
+    "it": false,
+    "__PATH_PREFIX__": false
+  },
+  "settings": {
+    "react": {
+      "version": "^16.9.0"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ]
+}

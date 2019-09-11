@@ -1,0 +1,27 @@
+.body-regular
+  font-size: $font-size-5
+  font-weight: $font-weight-regular
+  color: $color-text-primary
+
+.body-small
+  font-size: $font-size-2
+  font-weight: $font-weight-regular
+  color: $color-text-primary
+
+.body-large
+  font-size: $font-size-7
+  font-weight: $font-weight-regular
+  color: $color-text-primary
+
+.body-small_subtle
+  @extend .body-small
+  color: $color-text-subtle
+
+a
+  @extend .body-regular
+  color: $color-link-text-primary
+  cursor: pointer
+  text-decoration: none
+  &:hover
+    color: $color-link-text-primary-hover
+    text-decoration: underline

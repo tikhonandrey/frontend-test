@@ -1,11 +1,11 @@
 # App Demonstration
+
 A 2019 Technology Assessment for Kristi Centinaro
 
 This project is meant to demonstrate an example of how to develop a large scale front end application using frameworks and methodology that are prized today.
 In 10 years I hope to look on this fondly, and with a smidgen of PTSD, much like I do my Backbone/Marionette apps ... :)
 
-
-Cheers,
+Cheers,  
 Kristi Centinaro  
 @tnbKristi
 
@@ -14,13 +14,16 @@ Kristi Centinaro
 ## Running Locally
 
 ### Prerequisites
-- CORS proxy enabled for localhost or some equivalent
 
+- a CORS proxy enabled for localhost or some equivalent
+- Node Version Manager `npm install -g nvm`
 
-`git clone https://github.com/tnbKristi/demo-app-2019.git`  
-`cd demo-app-2019`  
-`npm install && npm start`  
-
+```
+git clone https://github.com/tnbKristi/demo-app-2019.git
+cd demo-app-2019
+nvm install
+npm install && npm start
+```
 
 ## Frameworks & Technology Used
 
@@ -42,9 +45,6 @@ Kristi Centinaro
 
 ## Other Goodies Included
 
-#### React Doc Generator
-Enables the developer to create documentation that's easy to understand, without writing all kinds of JSDOC comments!
+#### Typescript React Docgen
 
-Usage:  
-`npm run docs:gen -- componentfoldername`
-
+https://github.com/strothj/react-docgen-typescript-loader

@@ -1,0 +1,61 @@
+global:
+  type: color
+  category: background-color
+  cssProperties:
+    - background-color
+    - border-color
+    - box-shadow
+    - fill
+    - color
+imports:
+  - ../aliases/color-palettes.yml
+  - ../aliases/colors.yml
+props:
+  COLOR_GRAY_1:
+    value: "{!PALETTE_GRAY_1}"
+    comment: "The Lightest Gray Color (white)"
+  COLOR_GRAY_2:
+    value: "{!PALETTE_GRAY_2}"
+    comment: "Gray Color 2"
+  COLOR_GRAY_3:
+    value: "{!PALETTE_GRAY_3}"
+    comment: "Gray Color 3"
+  COLOR_GRAY_4:
+    value: "{!PALETTE_GRAY_4}"
+    comment: "Gray Color 4"
+  COLOR_GRAY_5:
+    value: "{!PALETTE_GRAY_5}"
+    comment: "Gray Color 5"
+  COLOR_GRAY_6:
+    value: "{!PALETTE_GRAY_6}"
+    comment: "Gray Color 6"
+  COLOR_GRAY_7:
+    value: "{!PALETTE_GRAY_7}"
+    comment: "Gray Color 7"
+  COLOR_GRAY_8:
+    value: "{!PALETTE_GRAY_8}"
+    comment: "Gray Color 8"
+  COLOR_GRAY_9:
+    value: "{!PALETTE_GRAY_9}"
+    comment: "Gray Color 9"
+  COLOR_GRAY_10:
+    value: "{!PALETTE_GRAY_10}"
+    comment: "Gray Color 10"
+  COLOR_GRAY_11:
+    value: "{!PALETTE_GRAY_11}"
+    comment: "Gray Color 11"
+  COLOR_GRAY_12:
+    value: "{!PALETTE_GRAY_12}"
+    comment: "Gray Color 12"
+  COLOR_GRAY_13:
+    value: "{!PALETTE_GRAY_13}"
+    comment: "Gray Color 13"
+  COLOR_SUCCESS:
+    value: "{!GREEN}"
+    comment: "The color for success or positive actions."
+  COLOR_CONCERNED:
+    value: "{!MUSTARD_YELLOW}"
+    comment: "The color for warning or concerned actions."
+  COLOR_DANGER:
+    value: "{!DARK_RED}"
+    comment: "The color for dangerous or negative actions."

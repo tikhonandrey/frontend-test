@@ -1,0 +1,10 @@
+global:
+  type: transition
+  category: transition
+  cssProperties:
+  - transition
+props:
+  BASE_TRANSITION:
+    value: "all .3s"
+    comment: "All properties, 300ms, linear"
+  
