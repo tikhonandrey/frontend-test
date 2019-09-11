@@ -1,14 +1,26 @@
 const path = require("path");
 
 module.exports = ({ config }) => {
-  config.module.rules.push({
-    test: /\.tsx?$/,
-    include: path.resolve(__dirname, "../src"),
-    use: [
-      require.resolve("ts-loader"),
-      require.resolve("react-docgen-typescript-loader")
-    ]
-  });
+  const updatedRules = [
+    {
+      test: /\.tsx?$/,
+      include: path.resolve(__dirname, "../src"),
+      use: [
+        require.resolve("ts-loader"),
+        require.resolve("react-docgen-typescript-loader")
+      ]
+    },
+    {
+      test: /\.s?[ac]ss$/,
+      use: [
+        require.resolve("style-loader"),
+        require.resolve("css-loader"),
+        require.resolve("sass-loader")
+      ],
+      include: path.resolve(__dirname, "../src")
+    }
+  ];
+  config.module.rules = [...config.module.rules, ...updatedRules];
 
   config.resolve.extensions.push(".ts", ".tsx");
 

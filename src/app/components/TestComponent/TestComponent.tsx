@@ -6,4 +6,4 @@ export interface TestComponentProps {
 
 export const TestComponent: React.FunctionComponent<TestComponentProps> = ({
   title
-}) => <div>Test, {title}!</div>;
+}) => <div className="test-component">Test, {title}!</div>;

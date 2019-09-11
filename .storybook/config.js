@@ -1,6 +1,6 @@
 import { addDecorator, configure } from "@storybook/react";
 import { withOptions } from "@storybook/addon-options";
-// require("../src/stories/_helpers/styles/storybook.sass");
+require("../src/style/storybook.sass");
 
 // automatically import all files ending in *.stories.tsx
 const components = require.context(
