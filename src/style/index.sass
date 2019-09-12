@@ -3,18 +3,30 @@
 // Resets
 @import 'vendor/normalize'
 
-// common setup
+// Utilities
+// Grid system, helper classes, and mixins
 @import 'utilities/index'
-// variables
+
+// Tokens
+// Sass variables, either manually or programmatically generated
 @import 'tokens/index'
-// type & font
+
+// Font
+// font definitions and references to font file sources
+@import 'fonts/index'
+
+// Typography
+// Headers & type and link style definitions
 @import 'typography/index'
 
-// leaflet (minimap styles)
-@import 'vendor/leaflet'
-
-// component styles - reusable things
+// Components
+// encapsulated styles for each component
 @import 'components/index'
 
-// module styles - unique pages and apps
+// Modules
+// encapsulated styles for unique & non-reusable components
 @import 'modules/index'
+
+// Pages
+// styles for distinct pages that is inappropriate as a module or component
+@import 'pages/index'
