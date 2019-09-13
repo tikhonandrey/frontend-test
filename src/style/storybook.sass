@@ -1,8 +1,26 @@
 @import 'config'
 @import 'tokens/index'
-@import 'utilities/index'
+@import 'storybook/helpers'
 
-#story-root
+
+
+#story-root, #root
   font-family: $font-family-text
   @extend .body-regular
-  @import 'index'
+
+  @import 'vendor/normalize'
+  @import 'fonts/index'
+  @import 'typography/index'
+  @import 'utilities/index'
+
+  @import 'components/index'
+  @import 'modules/index'
+  @import 'pages/index'
+
+  pre
+    display: inline-block
+    color: $color-text-secondary
+    padding: 3px 8px
+    border-radius: 6px
+    background-color: $color-background-secondary
+    border: 1px solid $color-border-primary

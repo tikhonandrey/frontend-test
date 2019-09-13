@@ -4,16 +4,30 @@ $icon-margin: 4px
   background-color: $color-button-bg-primary
   color: $color-button-text-primary
   display: inline-block
-  height: 42px
-  border-radius: 4px
   text-align: center
-  font-weight: 600
-  font-size: $font-size-6
+  font-weight: $font-weight-regular
+  font-size: $font-size-button
+  border: none
+  padding: 8px 12px
+  text-transform: uppercase
   @include transition(background-color)
 
   &:hover
     color: $color-button-text-primary
     background-color: $color-button-bg-hover-primary
+
+  &:disabled
+    color: $color-button-text-primary-disabled
+    background-color: $color-button-bg-primary-disabled
+
+  &.button--secondary
+    color: $color-button-text-secondary
+    background-color: $color-button-bg-secondary
+    border: 1px solid $color-button-text-secondary
+
+    &:hover
+      color: $color-button-text-secondary
+      background-color: $color-button-bg-hover-secondary
 
   > span
     display: inline-block
@@ -26,7 +40,7 @@ $icon-margin: 4px
   &.button--with-icon
     i
       display: inline-block
-      font-size: $font-size-7
+      font-size: $font-size-default
       vertical-align: middle
 
   &.button--icon-right

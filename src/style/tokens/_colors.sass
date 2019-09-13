@@ -1,19 +1,43 @@
 $white: #fff
 $black: #000
+$subtle-grey: #E6E6E6
 $light-grey: #C8C8C8
-$text-grey: #5C5C5C
+$mid-grey: #666666
+$text-grey: #333333
 
 // Brand colors
-$pink: #FF6776
+$navy-blue: #002B56
 
-// Core definitions
-$color-button-bg-primary: $pink
-$color-button-bg-hover-primary: darken($pink, 10)
-$color-button-text-primary: $white
+// Core definitions ----------------------------------------
+//text
 $color-text-primary: $text-grey
+$color-text-secondary: $mid-grey
 $color-text-subtle: $light-grey
-$color-link-text-primary: $pink
-$color-link-text-primary-hover: darken($pink, 10)
+
+// links
+$color-link-text-primary: $navy-blue
+$color-link-text-primary-hover: darken($color-link-text-primary, 10)
+
+// border colors
+$color-border-primary: $light-grey
+
+// background colors
+$color-background-primary: $subtle-grey
+$color-background-secondary: #F7F7F7
+
+// Components ----------------------------------------
+// buttons
+$color-button-text-primary: $white
+$color-button-text-primary-disabled: $subtle-grey
+
+$color-button-bg-primary: $color-link-text-primary
+$color-button-bg-primary-disabled: $light-grey
+
+$color-button-bg-hover-primary: darken($color-button-bg-primary, 10)
+  
+$color-button-text-secondary: $color-text-primary
+$color-button-bg-secondary: $white
+$color-button-bg-hover-secondary: $white
 
 // modal colors
 $color-modal-backdrop: rgba(77, 105, 146, 0.63)
@@ -21,7 +45,6 @@ $color-modal-icon-close: $white
 $color-modal-icon-shadow: rgba(0,0,0,0.3)
 
 // loader--grid
-$color-loader-background: $pink
+$color-loader-background: $color-button-bg-primary
 
-// event detail
-$color-event-hero-text: $white
+// Modules ----------------------------------------

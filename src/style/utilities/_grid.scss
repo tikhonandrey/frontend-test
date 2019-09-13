@@ -1,0 +1,37 @@
+$grid-columns: 12 !default;
+$grid_gap: 12px !default;
+
+.grid {
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  counter-reset: div;
+}
+
+@for $i from 1 through $grid-columns {
+  $colSize: 100 / $i;
+
+  .col-#{$i} {
+    grid-column: auto/span $i;
+  }
+
+  .row-#{$i} {
+    grid-row: auto/span $i;
+  }
+}
+
+@each $size in map-keys($breakpoints) {
+  $breakpoint: map-get($breakpoints, $size);
+
+  @each $key in $size {
+    @media (min-width: #{pem($breakpoint)}) {
+      @for $i from 1 through $grid-columns {
+        $colSize: 100 / $i;
+
+        .grid-#{$size}-#{$i} {
+          grid-column: auto/span $i;
+        }
+      }
+    }
+  }
+}

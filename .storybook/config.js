@@ -8,7 +8,10 @@ const components = require.context(
   true,
   /.stories.tsx$/
 );
+const stories = require.context("../src/stories", true, /.stories.tsx$/);
+
 function loadStories() {
+  stories.keys().forEach(filename => stories(filename));
   components.keys().forEach(filename => components(filename));
 }
 

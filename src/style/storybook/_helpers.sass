@@ -1,5 +1,21 @@
-#story-root
+#story-root, #root
   margin: 20px
   padding: 20px
   background-color: $white
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.30)
+
+
+  .story-gridsystem
+    .grid
+      margin-bottom: 4px
+    .grid div
+      border: solid $light-grey
+      text-align: center
+      &:before
+        counter-increment: div
+        content: 'Div ' counter(div)
+      &[class]:after
+        display: block
+        text-align: center
+        background-color: $subtle-grey
+        content: '.'attr(class)
