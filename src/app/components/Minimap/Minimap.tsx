@@ -40,15 +40,15 @@ export const Minimap: React.FunctionComponent<MinimapProps> = ({
 }) => {
   const { latitude, longitude } = data;
   const zoom: number = 13;
-  const classes = [`minimap`, `${className || ""}`, `minimap__${size}`];
+  const classes = [`minimap`, `${className || ""}`, `minimap--${size}`];
 
   return (
     <div className={joinClassList(classes)}>
-      <div className="minimap--module-wrapper">
+      <div className="minimap__module-wrapper">
         <Map
           center={[latitude, longitude]}
           zoom={zoom}
-          className="minimap--module"
+          className="minimap__module"
         >
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -57,16 +57,16 @@ export const Minimap: React.FunctionComponent<MinimapProps> = ({
           {popup ? (
             <Marker
               position={[latitude, longitude]}
-              className="minimap--marker"
+              className="minimap__marker"
             >
-              <Popup className="minimap--popup">
-                <span className="minimap--popup-label">{popup}</span>
+              <Popup className="minimap__popup">
+                <span className="minimap__popup-label">{popup}</span>
               </Popup>
             </Marker>
           ) : null}
         </Map>
       </div>
-      {label ? <div className="minimap--label">{label}</div> : null}
+      {label ? <div className="minimap__label">{label}</div> : null}
     </div>
   );
 };

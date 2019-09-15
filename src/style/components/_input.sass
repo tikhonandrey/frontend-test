@@ -1,0 +1,29 @@
+.input
+  display: inline-block
+  margin: 2px 0 8px
+  &.block
+    display: block
+
+.input__element
+  display: block
+  width: 100%
+  color: #575757
+  background-color: #fff
+  background-image: none
+  border: 1px solid #e5e5ea
+  transition: border .3s ease-in-out
+  border-radius: 6px
+  padding: 7px 11px
+  font-size: $font-size-default
+  line-height: 1.42857143
+  margin: 0
+  box-sizing: border-box
+
+.input__label
+  @extend .body-small
+  color: $color-text-secondary
+  display: block
+  margin-left: 6px
+  margin-bottom: 2px
+
+.input--normal
