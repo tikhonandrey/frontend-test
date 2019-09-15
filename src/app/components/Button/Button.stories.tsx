@@ -7,7 +7,6 @@ import { withKnobs, boolean, text } from "@storybook/addon-knobs";
 import { Button } from "./Button";
 
 const stories = storiesOf("Components", module);
-stories.addDecorator(withKnobs);
 stories.add(
   "Button",
   withInfo({ inline: true })(() => (

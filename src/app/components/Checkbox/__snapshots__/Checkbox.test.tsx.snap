@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> doesn't blow up 1`] = `
+<div
+  className="checkbox checkbox--checked"
+>
+  <input
+    checked={true}
+    className="checkbox__input"
+    disabled={false}
+    id="checkbox_test"
+    name="checkbox_test"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="checkbox__label"
+    htmlFor="checkbox_test"
+  >
+    label
+  </label>
+</div>
+`;

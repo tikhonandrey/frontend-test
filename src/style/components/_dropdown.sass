@@ -1,0 +1,40 @@
+.dropdown
+  display: inline-block
+  position: relative
+  overflow: visible
+  height: 22px
+
+.dropdown__link
+  display: block
+  border-bottom: 1px solid $color-border-primary
+  padding-bottom: 4px
+  text-decoration: none
+  line-height: 18px
+  font-size: $font-size-dropdown
+  &::selection
+    background: transparent
+
+  &:hover
+    text-decoration: none
+
+.dropdown__link-icon
+  display: inline-block
+  float: right
+  color: $color-border-primary
+  font-size: $font-size-dropdown
+
+.dropdown__menu
+  border: 1px solid $color-border-primary
+  background-color: $color-dropdownmenu-bg
+  box-shadow: $box-shadow-default
+  margin: -2px 0 0
+  padding: 8px
+  list-style: none outside
+  opacity: 0
+  height: 0
+  overflow: hidden
+
+  &.dropdown__menu--open
+    height: auto
+    opacity: 1
+    @include transition(opacity)

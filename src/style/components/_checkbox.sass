@@ -1,0 +1,42 @@
+.checkbox
+  display: block
+  position: relative
+
+.checkbox__input[type="checkbox"]
+  + label
+    color: $color-text-secondary
+    position: relative
+    display: block
+    padding: 6px 0 6px 26px
+    cursor: pointer
+    @include transition(color)
+
+    &:before
+      @extend .material-icons
+      content: 'radio_button_unchecked'
+      position: absolute
+      top: 6px
+      left: 0
+      font-size: $font-size-large
+      color: $black
+
+  &:focus + label
+    box-shadow: $box-shadow-focus
+  
+  &:not(:checked),  &:checked
+    position: absolute
+    left: -9999px
+    opacity: 0
+
+  &:not(:checked):disabled + label:before
+    border: none
+    background-color: green
+
+  &:not(:checked) + label
+    &:hover:before
+      content: 'check_circle'
+      color: $color-text-subtle
+
+  &:checked
+    + label:before
+      content: 'check_circle'

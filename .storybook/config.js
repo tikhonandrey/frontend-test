@@ -1,5 +1,7 @@
 import { addDecorator, configure } from "@storybook/react";
 import { withOptions } from "@storybook/addon-options";
+import { withKnobs } from "@storybook/addon-knobs";
+
 require("../src/style/storybook.sass");
 
 // automatically import all files ending in *.stories.tsx
@@ -15,6 +17,7 @@ function loadStories() {
   components.keys().forEach(filename => components(filename));
 }
 
+addDecorator(withKnobs);
 addDecorator(
   withOptions({
     name: "Internal Design System",

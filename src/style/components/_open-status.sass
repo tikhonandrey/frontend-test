@@ -1,0 +1,57 @@
+.open-status
+  display: inline-block
+
+.open-status__indicator, .open-status__label
+  display: inline-block
+  font-weight: $font-weight-light
+
+.open-status__indicator--open
+  background-color: $color-status-open
+
+.open-status__indicator--closed
+  background-color: $color-status-closed
+
+.open-status--normal
+  .open-status__label
+    font-size: $font-size-openstatus-normal
+    margin-left: 6px
+    line-height: $font-size-openstatus-normal
+    vertical-align: middle
+  .open-status__indicator
+    width: 22px
+    height: 22px
+    line-height: $font-size-openstatus-normal
+    vertical-align: middle
+    border-radius: 50px
+
+
+.open-status--small
+  .open-status__label
+    font-size: $font-size-openstatus-small
+    text-transform: uppercase
+    margin-left: 4px
+    letter-spacing: .5px
+  .open-status__indicator
+    width: 8px
+    height: 8px
+    line-height: $font-size-openstatus-small
+    vertical-align: middle
+    border-radius: 50px
+
+.open-status--compact
+  .open-status__label
+    display: none
+  .open-status__indicator
+    border-radius: 8px
+    height: auto
+    width: auto
+    padding: 1px 6px
+    line-height: 12px
+    
+.open-status__compact-label
+  display: inline-block
+  vertical-align: middle
+  font-size: $font-size-openstatus-compact
+  text-transform: uppercase
+  font-weight: $font-weight-bold
+  color: $color-link-text-primary

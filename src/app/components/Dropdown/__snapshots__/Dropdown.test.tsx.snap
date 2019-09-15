@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> doesn't blow up 1`] = `
+<div
+  className="dropdown"
+>
+  <a
+    className="dropdown__link"
+    onClick={[Function]}
+  >
+    Click me
+    <Component
+      className="dropdown__link-icon"
+    >
+      keyboard_arrow_down
+    </Component>
+  </a>
+  <ul
+    className="dropdown__menu "
+    data-open={false}
+    role="menu"
+  >
+    <li
+      key="0/.0"
+    >
+      <div />
+    </li>
+  </ul>
+</div>
+`;

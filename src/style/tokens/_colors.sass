@@ -5,6 +5,9 @@ $light-grey: #C8C8C8
 $mid-grey: #666666
 $text-grey: #333333
 
+$green: #00E8A4
+$red: #FF3548
+$highlight-blue: #b5faff6e
 // Brand colors
 $navy-blue: #002B56
 
@@ -33,16 +36,29 @@ $color-button-text-primary-disabled: $subtle-grey
 $color-button-bg-primary: $color-link-text-primary
 $color-button-bg-primary-disabled: $light-grey
 
-$color-button-bg-hover-primary: darken($color-button-bg-primary, 10)
+$color-button-bg-hover-primary: lighten($color-button-bg-primary, 10)
   
 $color-button-text-secondary: $color-text-primary
-$color-button-bg-secondary: $white
-$color-button-bg-hover-secondary: $white
+$color-button-text-secondary-disabled: $subtle-grey
 
-// modal colors
-$color-modal-backdrop: rgba(77, 105, 146, 0.63)
-$color-modal-icon-close: $white
-$color-modal-icon-shadow: rgba(0,0,0,0.3)
+$color-button-bg-secondary: $white
+$color-button-bg-hover-secondary: lighten($color-button-bg-primary, 80)
+
+$color-button-border-secondary-disabled: $subtle-grey
+
+// menus
+$color-dropdownmenu-bg: $white
+
+// switch
+$color-switch-active: $green
+$color-switch-inactive: #969696
+$color-switch-disabled: $light-grey
+$color-switch-inactive-hover: #96D0BF
+$color-switch-bg: $subtle-grey
+
+// open status
+$color-status-open: $green
+$color-status-closed: $red
 
 // loader--grid
 $color-loader-background: $color-button-bg-primary

@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { joinClassList } from "../../helpers";
+
 export interface ButtonProps {
   onClick: (e: React.SyntheticEvent) => void;
   secondary?: boolean;
@@ -7,6 +9,7 @@ export interface ButtonProps {
   block?: boolean;
   children: React.ReactNode;
   className?: string;
+  id?: string;
 }
 
 export const Button: React.FunctionComponent<ButtonProps> = ({
@@ -23,7 +26,11 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
     `${className || ""}`
   ];
   return (
-    <button disabled={disabled} className={classes.join(" ")} onClick={onClick}>
+    <button
+      disabled={disabled}
+      className={joinClassList(classes)}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

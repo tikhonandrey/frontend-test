@@ -1,7 +1,12 @@
+
 @import 'config'
 @import 'tokens/index'
 @import 'storybook/helpers'
 
+$opensans-font-path: "/fonts/opensans/" !default
+$icon--material-path: "/fonts/materialicons/" !default
+
+@import 'fonts/index'
 
 
 #story-root, #root
@@ -9,7 +14,6 @@
   @extend .body-regular
 
   @import 'vendor/normalize'
-  @import 'fonts/index'
   @import 'typography/index'
   @import 'utilities/index'
 

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> doesn't blow up 1`] = `
+<div
+  className="switch switch--on"
+>
+  <label
+    className="switch__label"
+    htmlFor="switch_test"
+  >
+    <input
+      checked={true}
+      className="switch__input"
+      disabled={false}
+      id="switch_test"
+      name="switch_test"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="switch__lever"
+    />
+  </label>
+</div>
+`;
