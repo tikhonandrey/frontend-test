@@ -22,7 +22,7 @@ module.exports = ({ config }) => {
     {
       test: /\.(png|woff|woff2|eot|ttf|svg)$/,
       loaders: [require.resolve("file-loader")],
-      include: path.resolve(__dirname, "../src")
+      include: path.resolve(__dirname, "../")
     }
   ];
   config.module.rules = [...config.module.rules, ...updatedRules];

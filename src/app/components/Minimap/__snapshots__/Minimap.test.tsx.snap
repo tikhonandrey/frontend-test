@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Minimap /> doesn't blow up 1`] = `
+<div
+  className="minimap minimap__normal"
+>
+  <div
+    className="minimap--module-wrapper"
+  >
+    <Map
+      center={
+        Array [
+          37.33,
+          -121.89,
+        ]
+      }
+      className="minimap--module"
+      zoom={13}
+    >
+      <ForwardRef(Leaflet(TileLayer))
+        attribution="© <a href=\\"http://osm.org/copyright\\">OpenStreetMap</a> contributors"
+        url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
+      />
+    </Map>
+  </div>
+</div>
+`;

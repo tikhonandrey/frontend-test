@@ -3,7 +3,7 @@ module.exports = {
   snapshotSerializers: ["enzyme-to-json/serializer"],
   automock: false,
   transform: {
-    "^.+\\.tsx?$": "ts-jest",
+    "^.+\\.(ts|tsx)?$": "ts-jest",
     "\\.(js|jsx)?$": "babel-jest"
   },
   // automock: false,

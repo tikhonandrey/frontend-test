@@ -13,7 +13,7 @@ export const OpenStatus: React.FunctionComponent<OpenStatusProps> = ({
 }) => {
   const label = open ? "Open Now" : "Closed";
   return (
-    <div className={`open-status open-status--${size}`}>
+    <div className={`open-status open-status--${size} ${className || ""}`}>
       <span
         className={`open-status__indicator open-status__indicator--${
           open ? "open" : "closed"
