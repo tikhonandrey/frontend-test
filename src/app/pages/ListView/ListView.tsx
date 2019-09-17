@@ -2,6 +2,7 @@ import * as React from "react";
 import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
 
+import LocationGrid from "../../components/LocationGrid";
 /**
  * WORKING NOTE: Fragments
  * I believe the best pattern here is to use fragments to DRY up the
@@ -83,7 +84,10 @@ export const ListView: React.FunctionComponent<ListViewProps> = ({
       categories
     }
   });
+
+  console.log(loading, error, data);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error!</p>;
-  return <div>Boom: {location}</div>;
+  return <LocationGrid data={data} />;
 };

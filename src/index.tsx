@@ -23,7 +23,7 @@ import search from "../mockdata/search";
 
 const cache: any = new InMemoryCache({ typeName: false });
 const link: any = createHttpLink({
-  uri: "http://localhost:80/"
+  uri: "http://localhost:3000/https://api.yelp.com/v3/graphql"
 });
 
 const authLink = setContext((_: any, { headers }: any) => {
@@ -33,15 +33,14 @@ const authLink = setContext((_: any, { headers }: any) => {
   return {
     headers: {
       ...headers,
-      contentType: "application/graphql"
+      authorization: `Bearer ${token}`
     }
   };
 });
 
 const client = new ApolloClient({
   cache,
-  link: authLink.concat(link),
-  addTypename: false
+  link: authLink.concat(link)
   // resolvers,
   // typeDefs
 });

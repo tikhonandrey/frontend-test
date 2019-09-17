@@ -1,0 +1,45 @@
+.location-grid-item
+  width: 304px
+  height: 430px
+  margin-bottom: 30px
+  display: grid
+  grid-template-rows: min-content
+
+.location-grid-item__title
+  max-height: 58px
+
+.location-grid-item__image
+  overflow: hidden
+  max-width: 304px
+  height: 228px
+  margin-bottom: 20px
+  position: relative
+  // TODO: THIS DOES NOT HANDLE TOO-SHORT IMAGES.
+  // That must be handled in JS - not enough time left to code it. :(
+  img
+    width: 100%
+    display: block
+    position: relative
+    object-fit: cover
+    object-position: -20% 0
+
+.location-grid-item__rating
+  height: 20px
+
+.location-grid-item__metadata
+  height: 20px
+  span
+    vertical-align: middle
+
+.location-grid-item__category, .location-grid-item__price
+  font-size: $font-size-small
+  font-weight: $font-weight-light
+  text-transform: uppercase
+  color: $color-text-secondary
+
+.location-grid-item__openstatus 
+  text-align: right
+
+.location-grid-item__action
+  width: 100%
+  margin-top: 12px

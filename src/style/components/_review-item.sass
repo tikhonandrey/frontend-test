@@ -1,0 +1,32 @@
+.review-item
+
+.review-item__user
+  min-width: 304px
+
+.review-item-user__image, .review-item-user__info
+  float: left
+
+.review-item-user__image
+  overflow: hidden
+  height: 80px
+  width: 80px
+  margin-bottom: 20px
+  position: relative
+  img
+    width: 100%
+    display: block
+    position: relative
+    object-fit: cover
+    object-position: -20% 0
+
+.review-item-user__info
+  margin-left: 20px
+
+.review-item-user__date
+  font-size: $font-size-small
+  color: $color-text-secondary
+  margin-top: 6px
+
+.review-item-content__text
+  @extend .body-large
+  margin-top: 12px

@@ -1,3 +1,12 @@
 import * as React from "react";
 
-export const DetailView: React.FunctionComponent = () => <div>Detail View</div>;
+export interface DetailViewProps {
+  id: string;
+}
+
+export const DetailView: React.FunctionComponent<DetailViewProps> = ({
+  id
+}) => {
+  console.log(id);
+  return <div>Detail View</div>;
+};

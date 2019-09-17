@@ -3,12 +3,16 @@ import { times } from "lodash";
 
 import Icon from "../Icon";
 
+// I initially worked with this type, but had issues with inferrence
+// in components that used this. I need to learn more about how to make
+// types like these more modular and applied to primitive data I don't
+// have control over.
 export type RatingRange = 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5;
 
 export interface StarRatingProps {
   className?: string;
   size?: "small" | "large";
-  rating: RatingRange;
+  rating: number;
 }
 
 export const TYPE_MAP = {

@@ -9,6 +9,8 @@ import {
 import ListView from "./ListView";
 import DetailView from "./DetailView";
 
+export type TParams = { id: string };
+
 class Pages extends React.Component<RouteComponentProps<{}>> {
   constructor(props: RouteComponentProps) {
     super(props);
@@ -20,8 +22,8 @@ class Pages extends React.Component<RouteComponentProps<{}>> {
           path="/:id"
           default={true}
           exact={true}
-          render={() => {
-            return <DetailView {...this.props} />;
+          render={({ match }: RouteComponentProps<TParams>) => {
+            return <DetailView id={match.params.id} />;
           }}
         />
         <Route
