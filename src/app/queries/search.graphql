@@ -1,0 +1,24 @@
+import gql from 'graphql-tag';
+
+module.exports = gql`{
+  search(location: "las vegas", limit: 20, categories: "Restaurants") {
+    total
+    business {
+      name
+      rating
+      is_closed
+      price
+      categories {
+        title
+        parent_categories {
+          title
+        }
+      }
+      coordinates {
+        latitude
+        longitude
+      }
+      photos
+    }
+  }
+}`;

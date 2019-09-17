@@ -1,0 +1,2258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListView /> doesn't blow up 1`] = `
+<ApolloProvider
+  client={
+    ApolloClient {
+      "cache": InMemoryCache {
+        "addTypename": false,
+        "cacheKeyRoot": KeyTrie {
+          "weakness": true,
+        },
+        "config": Object {
+          "addTypename": false,
+          "dataIdFromObject": [Function],
+          "fragmentMatcher": HeuristicFragmentMatcher {},
+          "freezeResults": false,
+          "resultCaching": true,
+        },
+        "data": DepTrackingCache {
+          "data": Object {},
+          "depend": [Function],
+        },
+        "maybeBroadcastWatch": [Function],
+        "optimisticData": DepTrackingCache {
+          "data": Object {},
+          "depend": [Function],
+        },
+        "silenceBroadcast": false,
+        "storeReader": StoreReader {
+          "executeSelectionSet": [Function],
+          "executeStoreQuery": [Function],
+          "executeSubSelectedArray": [Function],
+          "freezeResults": false,
+        },
+        "storeWriter": StoreWriter {},
+        "typenameDocumentCache": Map {},
+        "watches": Set {},
+      },
+      "clearStoreCallbacks": Array [],
+      "defaultOptions": Object {},
+      "disableNetworkFetches": false,
+      "link": MockLink {
+        "addTypename": false,
+        "mockedResponsesByKey": Object {
+          "{\\"query\\":\\"query getRestaurantList($location: String, $limit: Number, $categories: String) {\\\\n  search(location: $location, limit: $limit, categories: $categories) {\\\\n    total\\\\n    business {\\\\n      name\\\\n      rating\\\\n      is_closed\\\\n      price\\\\n      categories {\\\\n        title\\\\n        parent_categories {\\\\n          title\\\\n        }\\\\n      }\\\\n      coordinates {\\\\n        latitude\\\\n        longitude\\\\n      }\\\\n      photos\\\\n    }\\\\n  }\\\\n}\\\\n\\"}": Array [
+            Object {
+              "request": Object {
+                "query": Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "getRestaurantList",
+                      },
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "location",
+                                },
+                                "value": Object {
+                                  "kind": "Variable",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "location",
+                                  },
+                                },
+                              },
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "limit",
+                                },
+                                "value": Object {
+                                  "kind": "Variable",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "limit",
+                                  },
+                                },
+                              },
+                              Object {
+                                "kind": "Argument",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "categories",
+                                },
+                                "value": Object {
+                                  "kind": "Variable",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "categories",
+                                  },
+                                },
+                              },
+                            ],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "search",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "total",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "business",
+                                  },
+                                  "selectionSet": Object {
+                                    "kind": "SelectionSet",
+                                    "selections": Array [
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "name",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "rating",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "is_closed",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "price",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "categories",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "title",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "parent_categories",
+                                              },
+                                              "selectionSet": Object {
+                                                "kind": "SelectionSet",
+                                                "selections": Array [
+                                                  Object {
+                                                    "alias": undefined,
+                                                    "arguments": Array [],
+                                                    "directives": Array [],
+                                                    "kind": "Field",
+                                                    "name": Object {
+                                                      "kind": "Name",
+                                                      "value": "title",
+                                                    },
+                                                    "selectionSet": undefined,
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "coordinates",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "latitude",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "longitude",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "photos",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [
+                        Object {
+                          "defaultValue": undefined,
+                          "directives": Array [],
+                          "kind": "VariableDefinition",
+                          "type": Object {
+                            "kind": "NamedType",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "String",
+                            },
+                          },
+                          "variable": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "location",
+                            },
+                          },
+                        },
+                        Object {
+                          "defaultValue": undefined,
+                          "directives": Array [],
+                          "kind": "VariableDefinition",
+                          "type": Object {
+                            "kind": "NamedType",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "Number",
+                            },
+                          },
+                          "variable": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "limit",
+                            },
+                          },
+                        },
+                        Object {
+                          "defaultValue": undefined,
+                          "directives": Array [],
+                          "kind": "VariableDefinition",
+                          "type": Object {
+                            "kind": "NamedType",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "String",
+                            },
+                          },
+                          "variable": Object {
+                            "kind": "Variable",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "categories",
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 473,
+                    "start": 0,
+                  },
+                },
+                "variables": Object {
+                  "categories": "Restaurants",
+                  "limit": 20,
+                  "location": "las vegas",
+                },
+              },
+              "result": Object {
+                "data": Object {
+                  "search": Object {
+                    "business": Array [
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "French",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Steakhouses",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Breakfast & Brunch",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.112859,
+                          "longitude": -115.172434,
+                        },
+                        "is_closed": false,
+                        "name": "Mon Ami Gabi",
+                        "photos": Array [
+                          "https://s3-media3.fl.yelpcdn.com/bphoto/ja1-oE6RiIWorNzty-A4Eg/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Southern",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "American (New)",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1223280184553,
+                          "longitude": -115.170111842838,
+                        },
+                        "is_closed": false,
+                        "name": "Yardbird Southern Table & Bar",
+                        "photos": Array [
+                          "https://s3-media1.fl.yelpcdn.com/bphoto/SjqX67pNUnPoyMsDNe6xzA/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Sandwiches",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Salad",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Wraps",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1094075,
+                          "longitude": -115.1718738,
+                        },
+                        "is_closed": false,
+                        "name": "Earl of Sandwich",
+                        "photos": Array [
+                          "https://s3-media2.fl.yelpcdn.com/bphoto/snFM4hWY5Ivv_NbhWcXPgQ/o.jpg",
+                        ],
+                        "price": "$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Breakfast & Brunch",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Burgers",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "American (Traditional)",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1443697895445,
+                          "longitude": -115.202492506843,
+                        },
+                        "is_closed": false,
+                        "name": "Egg & I",
+                        "photos": Array [
+                          "https://s3-media3.fl.yelpcdn.com/bphoto/tDnWv0HCj3YgRRIzLuMfww/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Mexican",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Food",
+                              },
+                            ],
+                            "title": "Desserts",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Salad",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.135072,
+                          "longitude": -115.171247,
+                        },
+                        "is_closed": false,
+                        "name": "El Dorado Cantina",
+                        "photos": Array [
+                          "https://s3-media3.fl.yelpcdn.com/bphoto/v7zjOwJ0rJCNg6ATTbJcuw/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "American (New)",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1157859554742,
+                          "longitude": -115.17323,
+                        },
+                        "is_closed": false,
+                        "name": "Gordon Ramsay Hell's Kitchen",
+                        "photos": Array [
+                          "https://s3-media4.fl.yelpcdn.com/bphoto/mFimEc6u8JCmbM5X1qgCeQ/o.jpg",
+                        ],
+                        "price": "$$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Breakfast & Brunch",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "American (Traditional)",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Burgers",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.0864753723145,
+                          "longitude": -115.225959777832,
+                        },
+                        "is_closed": false,
+                        "name": "Mr Mamas",
+                        "photos": Array [
+                          "https://s3-media1.fl.yelpcdn.com/bphoto/jcFwekQsVKpXleKqcWUu2Q/o.jpg",
+                        ],
+                        "price": "$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Japanese",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Korean",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Barbeque",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.109315,
+                          "longitude": -115.151063,
+                        },
+                        "is_closed": false,
+                        "name": "Gangnam Asian BBQ Dining",
+                        "photos": Array [
+                          "https://s3-media4.fl.yelpcdn.com/bphoto/SrM8q-cGpbX5RJUYiEFFrQ/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "American (New)",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Mexican",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Breakfast & Brunch",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1080857621234,
+                          "longitude": -115.17111089259,
+                        },
+                        "is_closed": false,
+                        "name": "Nacho Daddy",
+                        "photos": Array [
+                          "https://s3-media4.fl.yelpcdn.com/bphoto/pu9doqMplB5x5SEs8ikW6w/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Barbeque",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Burgers",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Soul Food",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.131985,
+                          "longitude": -115.177125,
+                        },
+                        "is_closed": false,
+                        "name": "Rollin Smoke Barbeque",
+                        "photos": Array [
+                          "https://s3-media3.fl.yelpcdn.com/bphoto/KngtUjVGEer36UU3sKi0dQ/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Seafood",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Nightlife",
+                              },
+                            ],
+                            "title": "Bars",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.14295,
+                          "longitude": -115.174937,
+                        },
+                        "is_closed": false,
+                        "name": "Oyster Bar",
+                        "photos": Array [
+                          "https://s3-media1.fl.yelpcdn.com/bphoto/7Rx_j6r85ufd8nOFc7u_fA/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Buffets",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.116113,
+                          "longitude": -115.176222,
+                        },
+                        "is_closed": false,
+                        "name": "Bacchanal Buffet",
+                        "photos": Array [
+                          "https://s3-media4.fl.yelpcdn.com/bphoto/T6p2zmAdERYge9RhYk2Y0Q/o.jpg",
+                        ],
+                        "price": "$$$",
+                        "rating": 4,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Pizza",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.109823,
+                          "longitude": -115.176047,
+                        },
+                        "is_closed": false,
+                        "name": "Secret Pizza",
+                        "photos": Array [
+                          "https://s3-media2.fl.yelpcdn.com/bphoto/aUEiGRhpkJD9VCiVsCViNw/o.jpg",
+                        ],
+                        "price": "$",
+                        "rating": 4,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Food",
+                              },
+                            ],
+                            "title": "Tea Rooms",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Food",
+                              },
+                            ],
+                            "title": "Bubble Tea",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Food",
+                              },
+                            ],
+                            "title": "Desserts",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.05421,
+                          "longitude": -115.2422,
+                        },
+                        "is_closed": false,
+                        "name": "Brew Tea Bar",
+                        "photos": Array [
+                          "https://s3-media1.fl.yelpcdn.com/bphoto/8v1oA_tuILqW6hWKcFrJtA/o.jpg",
+                        ],
+                        "price": "$",
+                        "rating": 5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "American (New)",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Breakfast & Brunch",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1181806905551,
+                          "longitude": -115.171579781293,
+                        },
+                        "is_closed": false,
+                        "name": "Hash House A Go Go",
+                        "photos": Array [
+                          "https://s3-media1.fl.yelpcdn.com/bphoto/Jc1gL11WLt-a4vDNEyT7MQ/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "American (New)",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Food",
+                              },
+                            ],
+                            "title": "Desserts",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Bars",
+                              },
+                            ],
+                            "title": "Cocktail Bars",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1678783156885,
+                          "longitude": -115.140640474856,
+                        },
+                        "is_closed": false,
+                        "name": "Carson Kitchen",
+                        "photos": Array [
+                          "https://s3-media2.fl.yelpcdn.com/bphoto/0VrHwfDDG_6nzvvar0TR4A/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Seafood",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Steakhouses",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Bars",
+                              },
+                            ],
+                            "title": "Wine Bars",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.119098,
+                          "longitude": -115.173656,
+                        },
+                        "is_closed": false,
+                        "name": "Joes Seafood Prime Steak & Stone Crab",
+                        "photos": Array [
+                          "https://s3-media1.fl.yelpcdn.com/bphoto/yv6j-8WjINHafebrmTw7PQ/o.jpg",
+                        ],
+                        "price": "$$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Mexican",
+                              },
+                            ],
+                            "title": "Tacos",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1315942123034,
+                          "longitude": -115.164766837504,
+                        },
+                        "is_closed": false,
+                        "name": "Tacos El Gordo",
+                        "photos": Array [
+                          "https://s3-media4.fl.yelpcdn.com/bphoto/KXhh6aAwCljschov68frTQ/o.jpg",
+                        ],
+                        "price": "$",
+                        "rating": 4,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Japanese",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Sushi Bars",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Buffets",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1171507742866,
+                          "longitude": -115.138436947621,
+                        },
+                        "is_closed": false,
+                        "name": "Sakana",
+                        "photos": Array [
+                          "https://s3-media2.fl.yelpcdn.com/bphoto/0QQfUjFZuI18NDU2w_SXoQ/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                      Object {
+                        "categories": Array [
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Korean",
+                          },
+                          Object {
+                            "parent_categories": Array [
+                              Object {
+                                "title": "Restaurants",
+                              },
+                            ],
+                            "title": "Barbeque",
+                          },
+                        ],
+                        "coordinates": Object {
+                          "latitude": 36.1260309581078,
+                          "longitude": -115.221996888693,
+                        },
+                        "is_closed": false,
+                        "name": "Hobak Korean BBQ",
+                        "photos": Array [
+                          "https://s3-media2.fl.yelpcdn.com/bphoto/hMaXW3Jbg1cVzFV8QmQvJg/o.jpg",
+                        ],
+                        "price": "$$",
+                        "rating": 4.5,
+                      },
+                    ],
+                    "total": 4912,
+                  },
+                },
+              },
+            },
+          ],
+        },
+      },
+      "localState": LocalState {
+        "cache": InMemoryCache {
+          "addTypename": false,
+          "cacheKeyRoot": KeyTrie {
+            "weakness": true,
+          },
+          "config": Object {
+            "addTypename": false,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": HeuristicFragmentMatcher {},
+            "freezeResults": false,
+            "resultCaching": true,
+          },
+          "data": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "maybeBroadcastWatch": [Function],
+          "optimisticData": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "silenceBroadcast": false,
+          "storeReader": StoreReader {
+            "executeSelectionSet": [Function],
+            "executeStoreQuery": [Function],
+            "executeSubSelectedArray": [Function],
+            "freezeResults": false,
+          },
+          "storeWriter": StoreWriter {},
+          "typenameDocumentCache": Map {},
+          "watches": Set {},
+        },
+        "client": [Circular],
+      },
+      "mutate": [Function],
+      "query": [Function],
+      "queryDeduplication": true,
+      "queryManager": QueryManager {
+        "assumeImmutableResults": false,
+        "clientAwareness": Object {
+          "name": undefined,
+          "version": undefined,
+        },
+        "dataStore": DataStore {
+          "cache": InMemoryCache {
+            "addTypename": false,
+            "cacheKeyRoot": KeyTrie {
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": false,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {},
+            "watches": Set {},
+          },
+        },
+        "fetchQueryRejectFns": Map {},
+        "idCounter": 1,
+        "inFlightLinkObservables": Map {},
+        "link": MockLink {
+          "addTypename": false,
+          "mockedResponsesByKey": Object {
+            "{\\"query\\":\\"query getRestaurantList($location: String, $limit: Number, $categories: String) {\\\\n  search(location: $location, limit: $limit, categories: $categories) {\\\\n    total\\\\n    business {\\\\n      name\\\\n      rating\\\\n      is_closed\\\\n      price\\\\n      categories {\\\\n        title\\\\n        parent_categories {\\\\n          title\\\\n        }\\\\n      }\\\\n      coordinates {\\\\n        latitude\\\\n        longitude\\\\n      }\\\\n      photos\\\\n    }\\\\n  }\\\\n}\\\\n\\"}": Array [
+              Object {
+                "request": Object {
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "getRestaurantList",
+                        },
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "location",
+                                  },
+                                  "value": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "location",
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "limit",
+                                  },
+                                  "value": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "limit",
+                                    },
+                                  },
+                                },
+                                Object {
+                                  "kind": "Argument",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "categories",
+                                  },
+                                  "value": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "categories",
+                                    },
+                                  },
+                                },
+                              ],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "search",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "total",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "business",
+                                    },
+                                    "selectionSet": Object {
+                                      "kind": "SelectionSet",
+                                      "selections": Array [
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "name",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "rating",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "is_closed",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "price",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "categories",
+                                          },
+                                          "selectionSet": Object {
+                                            "kind": "SelectionSet",
+                                            "selections": Array [
+                                              Object {
+                                                "alias": undefined,
+                                                "arguments": Array [],
+                                                "directives": Array [],
+                                                "kind": "Field",
+                                                "name": Object {
+                                                  "kind": "Name",
+                                                  "value": "title",
+                                                },
+                                                "selectionSet": undefined,
+                                              },
+                                              Object {
+                                                "alias": undefined,
+                                                "arguments": Array [],
+                                                "directives": Array [],
+                                                "kind": "Field",
+                                                "name": Object {
+                                                  "kind": "Name",
+                                                  "value": "parent_categories",
+                                                },
+                                                "selectionSet": Object {
+                                                  "kind": "SelectionSet",
+                                                  "selections": Array [
+                                                    Object {
+                                                      "alias": undefined,
+                                                      "arguments": Array [],
+                                                      "directives": Array [],
+                                                      "kind": "Field",
+                                                      "name": Object {
+                                                        "kind": "Name",
+                                                        "value": "title",
+                                                      },
+                                                      "selectionSet": undefined,
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "coordinates",
+                                          },
+                                          "selectionSet": Object {
+                                            "kind": "SelectionSet",
+                                            "selections": Array [
+                                              Object {
+                                                "alias": undefined,
+                                                "arguments": Array [],
+                                                "directives": Array [],
+                                                "kind": "Field",
+                                                "name": Object {
+                                                  "kind": "Name",
+                                                  "value": "latitude",
+                                                },
+                                                "selectionSet": undefined,
+                                              },
+                                              Object {
+                                                "alias": undefined,
+                                                "arguments": Array [],
+                                                "directives": Array [],
+                                                "kind": "Field",
+                                                "name": Object {
+                                                  "kind": "Name",
+                                                  "value": "longitude",
+                                                },
+                                                "selectionSet": undefined,
+                                              },
+                                            ],
+                                          },
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "photos",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [
+                          Object {
+                            "defaultValue": undefined,
+                            "directives": Array [],
+                            "kind": "VariableDefinition",
+                            "type": Object {
+                              "kind": "NamedType",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "String",
+                              },
+                            },
+                            "variable": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "location",
+                              },
+                            },
+                          },
+                          Object {
+                            "defaultValue": undefined,
+                            "directives": Array [],
+                            "kind": "VariableDefinition",
+                            "type": Object {
+                              "kind": "NamedType",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "Number",
+                              },
+                            },
+                            "variable": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "limit",
+                              },
+                            },
+                          },
+                          Object {
+                            "defaultValue": undefined,
+                            "directives": Array [],
+                            "kind": "VariableDefinition",
+                            "type": Object {
+                              "kind": "NamedType",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "String",
+                              },
+                            },
+                            "variable": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "categories",
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 473,
+                      "start": 0,
+                    },
+                  },
+                  "variables": Object {
+                    "categories": "Restaurants",
+                    "limit": 20,
+                    "location": "las vegas",
+                  },
+                },
+                "result": Object {
+                  "data": Object {
+                    "search": Object {
+                      "business": Array [
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "French",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Steakhouses",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Breakfast & Brunch",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.112859,
+                            "longitude": -115.172434,
+                          },
+                          "is_closed": false,
+                          "name": "Mon Ami Gabi",
+                          "photos": Array [
+                            "https://s3-media3.fl.yelpcdn.com/bphoto/ja1-oE6RiIWorNzty-A4Eg/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Southern",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "American (New)",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1223280184553,
+                            "longitude": -115.170111842838,
+                          },
+                          "is_closed": false,
+                          "name": "Yardbird Southern Table & Bar",
+                          "photos": Array [
+                            "https://s3-media1.fl.yelpcdn.com/bphoto/SjqX67pNUnPoyMsDNe6xzA/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Sandwiches",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Salad",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Wraps",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1094075,
+                            "longitude": -115.1718738,
+                          },
+                          "is_closed": false,
+                          "name": "Earl of Sandwich",
+                          "photos": Array [
+                            "https://s3-media2.fl.yelpcdn.com/bphoto/snFM4hWY5Ivv_NbhWcXPgQ/o.jpg",
+                          ],
+                          "price": "$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Breakfast & Brunch",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Burgers",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "American (Traditional)",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1443697895445,
+                            "longitude": -115.202492506843,
+                          },
+                          "is_closed": false,
+                          "name": "Egg & I",
+                          "photos": Array [
+                            "https://s3-media3.fl.yelpcdn.com/bphoto/tDnWv0HCj3YgRRIzLuMfww/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Mexican",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Food",
+                                },
+                              ],
+                              "title": "Desserts",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Salad",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.135072,
+                            "longitude": -115.171247,
+                          },
+                          "is_closed": false,
+                          "name": "El Dorado Cantina",
+                          "photos": Array [
+                            "https://s3-media3.fl.yelpcdn.com/bphoto/v7zjOwJ0rJCNg6ATTbJcuw/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "American (New)",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1157859554742,
+                            "longitude": -115.17323,
+                          },
+                          "is_closed": false,
+                          "name": "Gordon Ramsay Hell's Kitchen",
+                          "photos": Array [
+                            "https://s3-media4.fl.yelpcdn.com/bphoto/mFimEc6u8JCmbM5X1qgCeQ/o.jpg",
+                          ],
+                          "price": "$$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Breakfast & Brunch",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "American (Traditional)",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Burgers",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.0864753723145,
+                            "longitude": -115.225959777832,
+                          },
+                          "is_closed": false,
+                          "name": "Mr Mamas",
+                          "photos": Array [
+                            "https://s3-media1.fl.yelpcdn.com/bphoto/jcFwekQsVKpXleKqcWUu2Q/o.jpg",
+                          ],
+                          "price": "$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Japanese",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Korean",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Barbeque",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.109315,
+                            "longitude": -115.151063,
+                          },
+                          "is_closed": false,
+                          "name": "Gangnam Asian BBQ Dining",
+                          "photos": Array [
+                            "https://s3-media4.fl.yelpcdn.com/bphoto/SrM8q-cGpbX5RJUYiEFFrQ/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "American (New)",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Mexican",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Breakfast & Brunch",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1080857621234,
+                            "longitude": -115.17111089259,
+                          },
+                          "is_closed": false,
+                          "name": "Nacho Daddy",
+                          "photos": Array [
+                            "https://s3-media4.fl.yelpcdn.com/bphoto/pu9doqMplB5x5SEs8ikW6w/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Barbeque",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Burgers",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Soul Food",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.131985,
+                            "longitude": -115.177125,
+                          },
+                          "is_closed": false,
+                          "name": "Rollin Smoke Barbeque",
+                          "photos": Array [
+                            "https://s3-media3.fl.yelpcdn.com/bphoto/KngtUjVGEer36UU3sKi0dQ/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Seafood",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Nightlife",
+                                },
+                              ],
+                              "title": "Bars",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.14295,
+                            "longitude": -115.174937,
+                          },
+                          "is_closed": false,
+                          "name": "Oyster Bar",
+                          "photos": Array [
+                            "https://s3-media1.fl.yelpcdn.com/bphoto/7Rx_j6r85ufd8nOFc7u_fA/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Buffets",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.116113,
+                            "longitude": -115.176222,
+                          },
+                          "is_closed": false,
+                          "name": "Bacchanal Buffet",
+                          "photos": Array [
+                            "https://s3-media4.fl.yelpcdn.com/bphoto/T6p2zmAdERYge9RhYk2Y0Q/o.jpg",
+                          ],
+                          "price": "$$$",
+                          "rating": 4,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Pizza",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.109823,
+                            "longitude": -115.176047,
+                          },
+                          "is_closed": false,
+                          "name": "Secret Pizza",
+                          "photos": Array [
+                            "https://s3-media2.fl.yelpcdn.com/bphoto/aUEiGRhpkJD9VCiVsCViNw/o.jpg",
+                          ],
+                          "price": "$",
+                          "rating": 4,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Food",
+                                },
+                              ],
+                              "title": "Tea Rooms",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Food",
+                                },
+                              ],
+                              "title": "Bubble Tea",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Food",
+                                },
+                              ],
+                              "title": "Desserts",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.05421,
+                            "longitude": -115.2422,
+                          },
+                          "is_closed": false,
+                          "name": "Brew Tea Bar",
+                          "photos": Array [
+                            "https://s3-media1.fl.yelpcdn.com/bphoto/8v1oA_tuILqW6hWKcFrJtA/o.jpg",
+                          ],
+                          "price": "$",
+                          "rating": 5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "American (New)",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Breakfast & Brunch",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1181806905551,
+                            "longitude": -115.171579781293,
+                          },
+                          "is_closed": false,
+                          "name": "Hash House A Go Go",
+                          "photos": Array [
+                            "https://s3-media1.fl.yelpcdn.com/bphoto/Jc1gL11WLt-a4vDNEyT7MQ/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "American (New)",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Food",
+                                },
+                              ],
+                              "title": "Desserts",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Bars",
+                                },
+                              ],
+                              "title": "Cocktail Bars",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1678783156885,
+                            "longitude": -115.140640474856,
+                          },
+                          "is_closed": false,
+                          "name": "Carson Kitchen",
+                          "photos": Array [
+                            "https://s3-media2.fl.yelpcdn.com/bphoto/0VrHwfDDG_6nzvvar0TR4A/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Seafood",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Steakhouses",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Bars",
+                                },
+                              ],
+                              "title": "Wine Bars",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.119098,
+                            "longitude": -115.173656,
+                          },
+                          "is_closed": false,
+                          "name": "Joes Seafood Prime Steak & Stone Crab",
+                          "photos": Array [
+                            "https://s3-media1.fl.yelpcdn.com/bphoto/yv6j-8WjINHafebrmTw7PQ/o.jpg",
+                          ],
+                          "price": "$$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Mexican",
+                                },
+                              ],
+                              "title": "Tacos",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1315942123034,
+                            "longitude": -115.164766837504,
+                          },
+                          "is_closed": false,
+                          "name": "Tacos El Gordo",
+                          "photos": Array [
+                            "https://s3-media4.fl.yelpcdn.com/bphoto/KXhh6aAwCljschov68frTQ/o.jpg",
+                          ],
+                          "price": "$",
+                          "rating": 4,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Japanese",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Sushi Bars",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Buffets",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1171507742866,
+                            "longitude": -115.138436947621,
+                          },
+                          "is_closed": false,
+                          "name": "Sakana",
+                          "photos": Array [
+                            "https://s3-media2.fl.yelpcdn.com/bphoto/0QQfUjFZuI18NDU2w_SXoQ/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                        Object {
+                          "categories": Array [
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Korean",
+                            },
+                            Object {
+                              "parent_categories": Array [
+                                Object {
+                                  "title": "Restaurants",
+                                },
+                              ],
+                              "title": "Barbeque",
+                            },
+                          ],
+                          "coordinates": Object {
+                            "latitude": 36.1260309581078,
+                            "longitude": -115.221996888693,
+                          },
+                          "is_closed": false,
+                          "name": "Hobak Korean BBQ",
+                          "photos": Array [
+                            "https://s3-media2.fl.yelpcdn.com/bphoto/hMaXW3Jbg1cVzFV8QmQvJg/o.jpg",
+                          ],
+                          "price": "$$",
+                          "rating": 4.5,
+                        },
+                      ],
+                      "total": 4912,
+                    },
+                  },
+                },
+              },
+            ],
+          },
+        },
+        "localState": LocalState {
+          "cache": InMemoryCache {
+            "addTypename": false,
+            "cacheKeyRoot": KeyTrie {
+              "weakness": true,
+            },
+            "config": Object {
+              "addTypename": false,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {},
+            "watches": Set {},
+          },
+          "client": [Circular],
+        },
+        "mutationStore": MutationStore {
+          "store": Object {},
+        },
+        "onBroadcast": [Function],
+        "pollingInfoByQueryId": Map {},
+        "queries": Map {},
+        "queryDeduplication": true,
+        "queryStore": QueryStore {
+          "store": Object {},
+        },
+        "ssrMode": false,
+        "transformCache": WeakMap {},
+      },
+      "reFetchObservableQueries": [Function],
+      "resetStore": [Function],
+      "resetStoreCallbacks": Array [],
+      "store": DataStore {
+        "cache": InMemoryCache {
+          "addTypename": false,
+          "cacheKeyRoot": KeyTrie {
+            "weakness": true,
+          },
+          "config": Object {
+            "addTypename": false,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": HeuristicFragmentMatcher {},
+            "freezeResults": false,
+            "resultCaching": true,
+          },
+          "data": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "maybeBroadcastWatch": [Function],
+          "optimisticData": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "silenceBroadcast": false,
+          "storeReader": StoreReader {
+            "executeSelectionSet": [Function],
+            "executeStoreQuery": [Function],
+            "executeSubSelectedArray": [Function],
+            "freezeResults": false,
+          },
+          "storeWriter": StoreWriter {},
+          "typenameDocumentCache": Map {},
+          "watches": Set {},
+        },
+      },
+      "typeDefs": undefined,
+      "version": "2.6.4",
+      "watchQuery": [Function],
+    }
+  }
+>
+  <Component
+    categories="Restaurants"
+    limit={20}
+    location="las vegas"
+  />
+</ApolloProvider>
+`;

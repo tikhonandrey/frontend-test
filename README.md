@@ -11,12 +11,26 @@ Kristi Centinaro
 
 ## Live Demo
 
+Because of the CORS limitations on the Yelp API used for this demo,
+
 ## Running Locally
 
 ### Prerequisites
 
-- a CORS proxy enabled for localhost or some equivalent
-- Node Version Manager `npm install -g nvm`
+#### a CORS proxy enabled for localhost or some equivalent
+
+I used a modified version of `docker-cors-container`:
+
+```
+$ docker pull bcentinaro/cors-proxy
+$ docker run --restart=always -p 3000:3000 bcentinaro/cors-proxy
+```
+
+Big thanks to @bcentinaro for helping out with it!
+
+#### Node Version Manager
+
+`npm install -g nvm`
 
 ```
 git clone https://github.com/tnbKristi/demo-app-2019.git

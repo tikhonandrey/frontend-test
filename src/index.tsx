@@ -11,11 +11,11 @@ require("./style/index.sass");
 import { resolvers, typeDefs } from "./resolvers";
 
 import Pages from "./app/pages";
-import Login from "./app/pages/login";
+import Login from "./app/pages/Login";
 
 const cache: any = new InMemoryCache();
 const link: any = createHttpLink({
-  uri: "https://api.yelp.com/v3/graphql"
+  uri: "http://localhost:3000/https://api.yelp.com/v3/graphql"
 });
 
 const authLink = setContext((_: any, { headers }: any) => {

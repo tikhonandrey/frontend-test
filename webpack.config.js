@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const path = require("path");
 
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-
+var getTransformer = require("ts-transform-graphql-tag").getTransformer;
 const config = {
   entry: {
     app: ["./src/index.tsx"]

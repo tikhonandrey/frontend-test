@@ -1,4 +1,4 @@
-import { GET_DOG_QUERY } from "../../app/pages/ListView/ListView";
+import { GET_DOG_QUERY } from "../ListView";
 
 export default [
   {
