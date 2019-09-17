@@ -9,6 +9,6 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "mockdata"],
   "exclude": ["node_modules", "__test-utils__"]
 }
