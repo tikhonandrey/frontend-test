@@ -2,6 +2,8 @@ import * as React from "react";
 import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
 
+export const RESTAURANT_DATA = gql``;
+
 export const GET_RESTAURANT_LIST = gql`
   query getRestaurantList(
     $location: String
