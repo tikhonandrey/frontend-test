@@ -48,4 +48,22 @@ describe("<ListView />", () => {
     const wrapper = mountWithProvider(<ListView {...TEST_PARAMS} />, mocks);
     expect(wrapper.text()).toContain("Loading...");
   });
+
+  it("should render an error state if there is an error response", async () => {
+    const mocksWithError = [
+      {
+        request: mocks[0].request,
+        error: new Error("Blerp"),
+        result: {
+          data: {}
+        }
+      }
+    ];
+    const wrapper = mountWithProvider(
+      <ListView {...TEST_PARAMS} />,
+      mocksWithError
+    );
+    await updateWrapper(wrapper);
+    expect(wrapper.text()).toContain("Error!");
+  });
 });

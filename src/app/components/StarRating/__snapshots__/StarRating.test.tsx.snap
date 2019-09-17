@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StarRating /> doesn't blow up 1`] = `
+<div
+  className="star-rating"
+>
+  <Component
+    className="star-rating__star"
+    key="whole-0"
+  >
+    star
+  </Component>
+  <Component
+    className="star-rating__star"
+    key="whole-1"
+  >
+    star
+  </Component>
+  <Component
+    className="star-rating__star"
+    key="whole-2"
+  >
+    star
+  </Component>
+  <Component
+    className="star-rating__star"
+    key="whole-3"
+  >
+    star
+  </Component>
+  <Component
+    className="star-rating__star"
+    key="empty-0"
+  >
+    star_border
+  </Component>
+</div>
+`;

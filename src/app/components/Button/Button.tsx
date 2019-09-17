@@ -11,6 +11,8 @@ export interface ButtonProps {
   className?: string;
   id?: string;
   type?: "button" | "submit" | "reset";
+  href?: string;
+  target?: string;
 }
 
 export const Button: React.FunctionComponent<ButtonProps> = ({
@@ -20,7 +22,9 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
   block,
   children,
   className,
-  type = "button"
+  type = "button",
+  href,
+  target
 }) => {
   const classes = [
     `button`,
@@ -28,6 +32,15 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
     `${className || ""}`,
     `${block ? "block" : ""}`
   ];
+
+  if (!onClick && href) {
+    return (
+      <a href={href} target={target} className={joinClassList(classes)}>
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
       disabled={disabled}

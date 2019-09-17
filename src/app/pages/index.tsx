@@ -1,12 +1,40 @@
 import * as React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  RouteComponentProps,
+  withRouter,
+  Route,
+  Switch
+} from "react-router-dom";
 
-import Home from "./Home";
+import ListView from "./ListView";
+import DetailView from "./DetailView";
 
-const Pages: React.FunctionComponent = () => (
-  <div className="app--container">
-    <Home />
-  </div>
-);
+class Pages extends React.Component<RouteComponentProps<{}>> {
+  constructor(props: RouteComponentProps) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className="app--container">
+        <Route
+          path="/:id"
+          default={true}
+          exact={true}
+          render={() => {
+            return <DetailView {...this.props} />;
+          }}
+        />
+        <Route
+          path="/"
+          {...this.props}
+          exact={true}
+          render={() => {
+            return <ListView />;
+          }}
+        />
+      </div>
+    );
+  }
+}
 
-export default Pages;
+export default withRouter(Pages);

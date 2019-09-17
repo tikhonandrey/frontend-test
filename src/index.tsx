@@ -6,6 +6,7 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { setContext } from "apollo-link-context";
 import { ApolloProvider, useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
+import * as ReactRouter from "react-router-dom";
 
 require("./style/index.sass");
 import { resolvers, typeDefs } from "./resolvers";
@@ -13,9 +14,16 @@ import { resolvers, typeDefs } from "./resolvers";
 import Pages from "./app/pages";
 import Login from "./app/pages/Login";
 
-const cache: any = new InMemoryCache();
+/**
+ * MOCK DATA:
+ * Because this app uses an experimental API with no CORS enabled,
+ * for demonstration purposes only this serves mock data.
+ */
+import search from "../mockdata/search";
+
+const cache: any = new InMemoryCache({ typeName: false });
 const link: any = createHttpLink({
-  uri: "http://localhost:3000/https://api.yelp.com/v3/graphql"
+  uri: "http://localhost:80/"
 });
 
 const authLink = setContext((_: any, { headers }: any) => {
@@ -25,22 +33,22 @@ const authLink = setContext((_: any, { headers }: any) => {
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : ""
+      contentType: "application/graphql"
     }
   };
 });
 
 const client = new ApolloClient({
   cache,
-  link: authLink.concat(link)
+  link: authLink.concat(link),
+  addTypename: false
   // resolvers,
   // typeDefs
 });
 
 cache.writeData({
   data: {
-    isLoggedIn: !!localStorage.getItem("token"),
-    cartItems: []
+    isLoggedIn: !!localStorage.getItem("token")
   }
 });
 
@@ -52,7 +60,13 @@ const IS_LOGGED_IN = gql`
 
 const IsLoggedIn = () => {
   const { data } = useQuery(IS_LOGGED_IN);
-  return data.isLoggedIn ? <Pages /> : <Login />;
+  return data.isLoggedIn ? (
+    <ReactRouter.HashRouter basename="/">
+      <Pages />
+    </ReactRouter.HashRouter>
+  ) : (
+    <Login />
+  );
 };
 
 ReactDOM.render(
