@@ -14,13 +14,6 @@ import { resolvers, typeDefs } from "./resolvers";
 import Pages from "./app/pages";
 import Login from "./app/pages/Login/index";
 
-/**
- * MOCK DATA:
- * Because this app uses an experimental API with no CORS enabled,
- * for demonstration purposes only this serves mock data.
- */
-import search from "../mockdata/search";
-
 const cache: any = new InMemoryCache({ typeName: false });
 const link: any = createHttpLink({
   uri: "http://localhost:3000/https://api.yelp.com/v3/graphql"

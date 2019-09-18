@@ -2,7 +2,7 @@
 
 exports[`<LoginForm /> doesn't blow up 1`] = `
 <div
-  className="module-login-form"
+  className="module__login-form"
 >
   <form
     className="login-form"

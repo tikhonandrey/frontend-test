@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LocationGrid /> doesn't blow up 1`] = `
+<Component
+  data={
+    Object {
+      "business": Array [],
+      "total": 4,
+    }
+  }
+  values={
+    Object {
+      "categories": Array [],
+      "open": true,
+      "prices": Array [],
+    }
+  }
+>
+  <div
+    className="location-grid"
+  />
+</Component>
+`;

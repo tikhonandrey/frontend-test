@@ -45,7 +45,7 @@ export const LocationGridItem: React.FunctionComponent<
         <OpenStatus size="small" open={!isClosed} />
       </div>
     </div>
-    <Button className="location-grid-item__action" block href={`/${id}`}>
+    <Button className="location-grid-item__action" block href={`#/${id}`}>
       Learn More
     </Button>
   </div>

@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { LocationGridItem, LocationItemProps } from "./LocationGridItem";
+import { FilterValues } from "../FilterBar/index";
 
 export interface LocationData {
   total: number;
@@ -10,12 +11,14 @@ export interface LocationData {
 export interface LocationGridProps {
   className?: string;
   data: LocationData;
+  values: FilterValues;
 }
 
 export const LocationGrid: React.FunctionComponent<LocationGridProps> = ({
   children,
   className,
-  data
+  data,
+  values
 }) => {
   const { business } = data;
   return (

@@ -10,22 +10,30 @@ export interface ChangeEventObject {
   value: boolean;
 }
 
+export interface FilterValues {
+  open: boolean;
+  prices: Array<string>;
+  categories: Array<string>;
+}
+
 export interface FilterBarProps {
   categories: Array<string>;
   prices: Array<string>;
   onUpdate: (name: string, changes: ChangeEventObject) => void;
-  values: {
-    prices: Array<string>;
-    categories: Array<string>;
-    open: boolean;
-  };
+  values: FilterValues;
 }
+
+export const FILTER_DEFAULT: FilterValues = {
+  prices: [],
+  categories: [],
+  open: true
+};
 
 export const FilterBar: React.FunctionComponent<FilterBarProps> = ({
   categories,
   prices,
   onUpdate,
-  values
+  values = FILTER_DEFAULT
 }) => {
   return (
     <div className="filter-bar">
@@ -36,7 +44,7 @@ export const FilterBar: React.FunctionComponent<FilterBarProps> = ({
           id="open-toggle"
           name="is-open"
           checked={values.open}
-          onChange={value => onUpdate("isOpen", value)}
+          onChange={value => onUpdate("open", value)}
         />
       </div>
       <div className="filter-bar__inline-input">

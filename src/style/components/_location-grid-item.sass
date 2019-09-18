@@ -14,14 +14,14 @@
   height: 228px
   margin-bottom: 20px
   position: relative
-  // TODO: THIS DOES NOT HANDLE TOO-SHORT IMAGES.
+  // TODO: THIS DOES NOT HANDLE HORIZONTAL IMAGES.
   // That must be handled in JS - not enough time left to code it. :(
   img
-    width: 100%
     display: block
     position: relative
-    object-fit: cover
-    object-position: -20% 0
+    top: 60%
+    transform: translateY(-60%)
+    width: 100%
 
 .location-grid-item__rating
   height: 20px

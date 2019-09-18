@@ -4,7 +4,7 @@ import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, boolean, select } from "@storybook/addon-knobs";
 
-import mockData from "../../../../mockdata/search";
+import mockData from "../../__mocks__/search";
 
 import { ReviewItem } from "./ReviewItem";
 const review = mockData.data.search.business[0].reviews[0];
