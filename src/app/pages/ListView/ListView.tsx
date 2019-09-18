@@ -3,42 +3,10 @@ import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
 
 import LocationGrid from "../../components/LocationGrid";
-/**
- * WORKING NOTE: Fragments
- * I believe the best pattern here is to use fragments to DRY up the
- * business listing for the detail page.
- *
- * However I am running out of dev time and may not
- * be able to come back to refactor this before deadline.
- *
- */
-// export const RESTAURANT_DATA = gql`
-//   fragment RestaurantItem on Business {
-//     id
-//     name
-//     rating
-//     is_closed
-//     price
-//     categories {
-//       title
-//       parent_categories {
-//         title
-//       }
-//     }
-//     coordinates {
-//       latitude
-//       longitude
-//     }
-//     photos
-//   }
-// `;
+import Loader from "../../components/Loader";
 
 export const GET_RESTAURANT_LIST = gql`
-  query getRestaurantList(
-    $location: String
-    $limit: Number
-    $categories: String
-  ) {
+  query getRestaurantList($location: String, $limit: Int, $categories: String) {
     search(location: $location, limit: $limit, categories: $categories) {
       total
       business {
@@ -87,7 +55,11 @@ export const ListView: React.FunctionComponent<ListViewProps> = ({
 
   console.log(loading, error, data);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>Error!</p>;
-  return <LocationGrid data={data} />;
+  return (
+    <div className="module module__list-view">
+      <LocationGrid data={data.search} />
+    </div>
+  );
 };

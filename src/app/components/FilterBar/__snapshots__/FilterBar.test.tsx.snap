@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterBar /> doesn't blow up 1`] = `
+<div
+  className="filter-bar"
+>
+  <div
+    className="filter-bar__inline-label"
+  >
+    Filter By: 
+  </div>
+  <div
+    className="filter-bar__inline-input"
+  >
+    <Component
+      checked={false}
+      className="filter-bar__open-toggle-input"
+      id="open-toggle"
+      name="is-open"
+      onChange={[Function]}
+    />
+  </div>
+  <div
+    className="filter-bar__inline-input"
+  >
+    <Component
+      className="filter-bar__price-dropdown-input"
+      name="Price"
+    >
+      <Component
+        checked={false}
+        id="price-0"
+        key="price-0"
+        label="$"
+        name="$"
+        onChange={[Function]}
+      />
+      <Component
+        checked={true}
+        id="price-1"
+        key="price-1"
+        label="$$"
+        name="$$"
+        onChange={[Function]}
+      />
+      <Component
+        checked={false}
+        id="price-2"
+        key="price-2"
+        label="$$$"
+        name="$$$"
+        onChange={[Function]}
+      />
+    </Component>
+  </div>
+  <div
+    className="filter-bar__inline-input"
+  >
+    <Component
+      className="filter-bar__category-dropdown-input"
+      name="Categories"
+    >
+      <Component
+        checked={true}
+        id="category-0"
+        key="category-0"
+        label="French"
+        name="French"
+        onChange={[Function]}
+      />
+      <Component
+        checked={false}
+        id="category-1"
+        key="category-1"
+        label="Italian"
+        name="Italian"
+        onChange={[Function]}
+      />
+      <Component
+        checked={false}
+        id="category-2"
+        key="category-2"
+        label="Japanese"
+        name="Japanese"
+        onChange={[Function]}
+      />
+    </Component>
+  </div>
+</div>
+`;

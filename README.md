@@ -9,22 +9,20 @@ Cheers,
 Kristi Centinaro  
 @tnbKristi
 
-## Live Demo
-
-Because of the CORS limitations on the Yelp API used for this demo,
-
 ## Running Locally
 
 ### Prerequisites
 
-#### a CORS proxy enabled for localhost or some equivalent
+#### Docker CORS proxy server
 
-I used a modified version of `docker-cors-container`:
+I used a docker container `cors-proxy`:
 
 ```
 $ docker pull bcentinaro/cors-proxy
-$ docker run --restart=always -p 3000:3000 bcentinaro/cors-proxy
+$ docker run -p 3000:80 -it bcentinaro/cors-proxy:latest
 ```
+
+Ctrl+C to exit out.
 
 Big thanks to @bcentinaro for helping out with it!
 
@@ -41,7 +39,7 @@ npm install && npm start
 
 ## Frameworks & Technology Used
 
-- React
+- React w/ Hooks
 - GraphQL
 - TypeScript
 - Storybook

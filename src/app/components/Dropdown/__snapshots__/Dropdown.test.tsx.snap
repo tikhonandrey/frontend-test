@@ -8,7 +8,11 @@ exports[`<Dropdown /> doesn't blow up 1`] = `
     className="dropdown__link"
     onClick={[Function]}
   >
-    Click me
+    <span
+      className="dropdown__label"
+    >
+      Click Me
+    </span>
     <Component
       className="dropdown__link-icon"
     >

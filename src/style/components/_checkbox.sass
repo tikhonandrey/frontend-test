@@ -15,7 +15,7 @@
       @extend .material-icons
       content: 'radio_button_unchecked'
       position: absolute
-      top: 6px
+      top: 4px
       left: 0
       font-size: $font-size-large
       color: $black
@@ -40,3 +40,22 @@
   &:checked
     + label:before
       content: 'check_circle'
+
+.checkbox--radio
+  .checkbox__input
+    &:before
+      content: 'radio_button_unchecked'
+
+    &:not(:checked) + label
+      &:hover:before
+        content: 'radio_button_checked'
+        color: $color-text-subtle
+
+    &:checked
+      + label:before
+        color: $color-link-text-primary
+        content: 'radio_button_checked'
+
+  .checkbox__input[type="checkbox"]
+    + label
+      color: $color-link-text-primary

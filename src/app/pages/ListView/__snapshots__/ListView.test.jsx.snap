@@ -42,7 +42,7 @@ exports[`<ListView /> doesn't blow up 1`] = `
       "link": MockLink {
         "addTypename": false,
         "mockedResponsesByKey": Object {
-          "{\\"query\\":\\"query getRestaurantList($location: String, $limit: Number, $categories: String) {\\\\n  search(location: $location, limit: $limit, categories: $categories) {\\\\n    total\\\\n    business {\\\\n      id\\\\n      name\\\\n      rating\\\\n      is_closed\\\\n      price\\\\n      categories {\\\\n        title\\\\n        parent_categories {\\\\n          title\\\\n        }\\\\n      }\\\\n      coordinates {\\\\n        latitude\\\\n        longitude\\\\n      }\\\\n      photos\\\\n    }\\\\n  }\\\\n}\\\\n\\"}": Array [
+          "{\\"query\\":\\"query getRestaurantList($location: String, $limit: Int, $categories: String) {\\\\n  search(location: $location, limit: $limit, categories: $categories) {\\\\n    total\\\\n    business {\\\\n      id\\\\n      name\\\\n      rating\\\\n      is_closed\\\\n      price\\\\n      categories {\\\\n        title\\\\n        parent_categories {\\\\n          title\\\\n        }\\\\n      }\\\\n      coordinates {\\\\n        latitude\\\\n        longitude\\\\n      }\\\\n      photos\\\\n    }\\\\n  }\\\\n}\\\\n\\"}": Array [
             Object {
               "request": Object {
                 "query": Object {
@@ -327,7 +327,7 @@ exports[`<ListView /> doesn't blow up 1`] = `
                             "kind": "NamedType",
                             "name": Object {
                               "kind": "Name",
-                              "value": "Number",
+                              "value": "Int",
                             },
                           },
                           "variable": Object {
@@ -362,7 +362,7 @@ exports[`<ListView /> doesn't blow up 1`] = `
                   ],
                   "kind": "Document",
                   "loc": Object {
-                    "end": 484,
+                    "end": 467,
                     "start": 0,
                   },
                 },
@@ -1173,7 +1173,7 @@ exports[`<ListView /> doesn't blow up 1`] = `
         "link": MockLink {
           "addTypename": false,
           "mockedResponsesByKey": Object {
-            "{\\"query\\":\\"query getRestaurantList($location: String, $limit: Number, $categories: String) {\\\\n  search(location: $location, limit: $limit, categories: $categories) {\\\\n    total\\\\n    business {\\\\n      id\\\\n      name\\\\n      rating\\\\n      is_closed\\\\n      price\\\\n      categories {\\\\n        title\\\\n        parent_categories {\\\\n          title\\\\n        }\\\\n      }\\\\n      coordinates {\\\\n        latitude\\\\n        longitude\\\\n      }\\\\n      photos\\\\n    }\\\\n  }\\\\n}\\\\n\\"}": Array [
+            "{\\"query\\":\\"query getRestaurantList($location: String, $limit: Int, $categories: String) {\\\\n  search(location: $location, limit: $limit, categories: $categories) {\\\\n    total\\\\n    business {\\\\n      id\\\\n      name\\\\n      rating\\\\n      is_closed\\\\n      price\\\\n      categories {\\\\n        title\\\\n        parent_categories {\\\\n          title\\\\n        }\\\\n      }\\\\n      coordinates {\\\\n        latitude\\\\n        longitude\\\\n      }\\\\n      photos\\\\n    }\\\\n  }\\\\n}\\\\n\\"}": Array [
               Object {
                 "request": Object {
                   "query": Object {
@@ -1458,7 +1458,7 @@ exports[`<ListView /> doesn't blow up 1`] = `
                               "kind": "NamedType",
                               "name": Object {
                                 "kind": "Name",
-                                "value": "Number",
+                                "value": "Int",
                               },
                             },
                             "variable": Object {
@@ -1493,7 +1493,7 @@ exports[`<ListView /> doesn't blow up 1`] = `
                     ],
                     "kind": "Document",
                     "loc": Object {
-                      "end": 484,
+                      "end": 467,
                       "start": 0,
                     },
                   },

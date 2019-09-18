@@ -6,7 +6,7 @@ import { Dropdown } from "./Dropdown";
 describe("<Dropdown />", () => {
   it("doesn't blow up", () => {
     const wrapper = shallow(
-      <Dropdown>
+      <Dropdown name="Click Me">
         <div></div>
       </Dropdown>
     );
@@ -16,7 +16,7 @@ describe("<Dropdown />", () => {
 
   it("has isOpen flag default to false", () => {
     const wrapper = shallow(
-      <Dropdown>
+      <Dropdown name="Click Me">
         <div></div>
       </Dropdown>
     );
@@ -25,7 +25,7 @@ describe("<Dropdown />", () => {
 
   it("updates isOpen flag when clicked", () => {
     const wrapper = shallow(
-      <Dropdown>
+      <Dropdown name="Click Me">
         <div></div>
       </Dropdown>
     );
@@ -41,7 +41,7 @@ describe("<Dropdown />", () => {
       triggered = true;
     };
     const wrapper = shallow(
-      <Dropdown onUpdate={updateMethod}>
+      <Dropdown onUpdate={updateMethod} name="Click Me">
         <div></div>
       </Dropdown>
     );
@@ -52,7 +52,7 @@ describe("<Dropdown />", () => {
 
   it("updates isOpen flag to true when explicitly passed", () => {
     const wrapper = shallow(
-      <Dropdown open>
+      <Dropdown open name="Click Me">
         <div></div>
       </Dropdown>
     );

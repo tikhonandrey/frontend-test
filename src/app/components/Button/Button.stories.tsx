@@ -10,14 +10,19 @@ const stories = storiesOf("Components", module);
 stories.add(
   "Button",
   withInfo({ inline: true })(() => (
-    <Button
-      secondary={boolean("Secondary", false)}
-      disabled={boolean("Disabled", false)}
-      block={boolean("Block", false)}
-      onClick={action("click!")}
-      className={text("Class Name", null)}
-    >
-      {text("Button Text", "Button Text")}
-    </Button>
+    <div>
+      <Button
+        secondary={boolean("Secondary", false)}
+        disabled={boolean("Disabled", false)}
+        block={boolean("Block", false)}
+        onClick={action("click!")}
+        className={text("Class Name", null)}
+      >
+        {text("Button Text", "Button Text")}
+      </Button>
+      <div style={{ marginLeft: "20px", display: "inline-block" }}>
+        <Button href="#">Link Button</Button>
+      </div>
+    </div>
   ))
 );

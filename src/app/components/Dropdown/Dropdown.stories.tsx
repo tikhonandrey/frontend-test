@@ -13,7 +13,11 @@ const stories = storiesOf("Components", module);
 stories.add(
   "Dropdown",
   withInfo({ inline: true })(() => (
-    <Dropdown onUpdate={action("Menu Toggled")} open={boolean("open", false)}>
+    <Dropdown
+      onUpdate={action("Menu Toggled")}
+      open={boolean("open", false)}
+      name={text("Name", "Click Me")}
+    >
       {demoItems.map((item: string, idx: number) => (
         <div key={idx}>{item}</div>
       ))}

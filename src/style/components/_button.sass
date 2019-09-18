@@ -1,6 +1,4 @@
 $icon-margin: 4px
-a.button
-  line-height: 30px
 
 .button
   text-decoration: none
@@ -13,7 +11,8 @@ a.button
   border: none
   padding: 8px 12px
   text-transform: uppercase
-  height: 30px
+  height: 40px
+  min-width: 120px
   @include transition(background-color)
 
   &.block
@@ -62,3 +61,8 @@ a.button
   &.button--icon-left
     i
       margin-right: $icon-margin
+
+a.button
+  padding: 0
+  height: 40px
+  line-height: 40px

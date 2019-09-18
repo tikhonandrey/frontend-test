@@ -35,7 +35,7 @@ export const DropdownWithCheckboxes: React.FunctionComponent = () => {
 
   return (
     <div className="grid">
-      <Dropdown className="col-8" open>
+      <Dropdown className="col-8" open name="Click Me">
         {Object.keys(items).map((item: string, idx: number) => (
           <Checkbox
             key={idx}

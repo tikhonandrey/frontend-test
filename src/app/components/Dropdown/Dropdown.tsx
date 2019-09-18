@@ -16,6 +16,10 @@ export interface DropdownProps {
   onUpdate?: (openStatus: boolean) => void;
   id?: string;
   className?: string;
+  /**
+   * The text of the dropdown link
+   */
+  name: string;
 }
 
 export const Dropdown: React.FunctionComponent<DropdownProps> = ({
@@ -23,7 +27,8 @@ export const Dropdown: React.FunctionComponent<DropdownProps> = ({
   onUpdate = () => {},
   className,
   id,
-  children
+  children,
+  name
 }) => {
   const classes = [`dropdown`, `${className || ""}`];
   const elementRef = React.useRef(null);
@@ -33,7 +38,7 @@ export const Dropdown: React.FunctionComponent<DropdownProps> = ({
   React.useEffect(() => toggleOpen(open), [open]);
 
   return (
-    <div className={joinClassList(classes)} ref={elementRef}>
+    <div className={joinClassList(classes)} ref={elementRef} id={id}>
       <a
         className="dropdown__link"
         onClick={() => {
@@ -41,7 +46,7 @@ export const Dropdown: React.FunctionComponent<DropdownProps> = ({
           onUpdate(isOpen);
         }}
       >
-        Click me
+        <span className="dropdown__label">{name}</span>
         <Icon className="dropdown__link-icon">
           {isOpen ? "keyboard_arrow_up" : "keyboard_arrow_down"}
         </Icon>

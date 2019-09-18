@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OpenToggleInput /> doesn't blow up 1`] = `
+<div
+  className="open-toggle-input"
+>
+  <Component
+    checked={false}
+    className="checkbox--radio"
+    id="toggle_sample"
+    label="Open Now"
+    name="toggle-sample"
+    onChange={[Function]}
+  />
+</div>
+`;
