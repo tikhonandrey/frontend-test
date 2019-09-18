@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginForm /> doesn't blow up 1`] = `
+<div
+  className="module-login-form"
+>
+  <form
+    className="login-form"
+    onSubmit={[Function]}
+  >
+    <h2
+      className="login-form__header"
+    >
+      "Login" with a Yelp API Key
+    </h2>
+    <p>
+      Make sure you are enrolled in the
+       
+      <a
+        href="https://www.yelp.com/developers/v3/manage_app"
+        target="__blank"
+      >
+        Developer Beta
+      </a>
+       
+      to access GraphQL.
+    </p>
+    <div>
+      <Component
+        block={true}
+        className="login-form__input input input--text"
+        id="input-token"
+        label="API Key"
+        name="token"
+        onChange={[Function]}
+        type="text"
+      />
+      <Component
+        block={true}
+        className="login-form__submit"
+        type="submit"
+      >
+        Submit
+      </Component>
+    </div>
+  </form>
+</div>
+`;

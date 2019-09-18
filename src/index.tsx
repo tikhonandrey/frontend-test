@@ -12,7 +12,7 @@ require("./style/index.sass");
 import { resolvers, typeDefs } from "./resolvers";
 
 import Pages from "./app/pages";
-import Login from "./app/pages/Login";
+import Login from "./app/pages/Login/index";
 
 /**
  * MOCK DATA:

@@ -23,7 +23,8 @@ export const Input: React.FunctionComponent<InputProps> = ({
   type = "text",
   size = "normal",
   placeholder,
-  label
+  label,
+  name
 }) => {
   const inputClasses = [
     `input__element`,
@@ -44,6 +45,7 @@ export const Input: React.FunctionComponent<InputProps> = ({
         onChange={onChange}
         placeholder={placeholder}
         type={type}
+        name={name}
       />
     </div>
   );

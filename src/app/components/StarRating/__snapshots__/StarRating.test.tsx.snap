@@ -2,7 +2,7 @@
 
 exports[`<StarRating /> doesn't blow up 1`] = `
 <div
-  className="star-rating"
+  className="star-rating star-rating--small"
 >
   <Component
     className="star-rating__star"

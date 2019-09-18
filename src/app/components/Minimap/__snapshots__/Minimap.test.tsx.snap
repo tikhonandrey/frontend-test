@@ -2,10 +2,10 @@
 
 exports[`<Minimap /> doesn't blow up 1`] = `
 <div
-  className="minimap minimap__normal"
+  className="minimap minimap--normal"
 >
   <div
-    className="minimap--module-wrapper"
+    className="minimap__module-wrapper"
   >
     <Map
       center={
@@ -14,7 +14,7 @@ exports[`<Minimap /> doesn't blow up 1`] = `
           -121.89,
         ]
       }
-      className="minimap--module"
+      className="minimap__module"
       zoom={13}
     >
       <ForwardRef(Leaflet(TileLayer))

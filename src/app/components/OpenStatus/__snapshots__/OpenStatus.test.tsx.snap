@@ -2,7 +2,7 @@
 
 exports[`<OpenStatus /> doesn't blow up 1`] = `
 <div
-  className="open-status open-status--normal"
+  className="open-status open-status--normal "
 >
   <span
     className="open-status__indicator open-status__indicator--open"

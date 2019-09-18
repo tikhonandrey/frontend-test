@@ -5,6 +5,9 @@ import { shallow, mount } from "enzyme";
 import * as Apollo from "@apollo/react-testing";
 
 import { ListView } from "./ListView";
+import Loader from "../../components/Loader";
+import Error from "../Error";
+
 import mocks from "./__mocks__/search.mock";
 
 const TEST_PARAMS = {
@@ -46,7 +49,8 @@ describe("<ListView />", () => {
 
   it("should render loading state initially", async () => {
     const wrapper = mountWithProvider(<ListView {...TEST_PARAMS} />, mocks);
-    expect(wrapper.text()).toContain("Loading...");
+    const loader = shallow(<Loader />);
+    expect(wrapper.html()).toContain(loader.html());
   });
 
   it("should render an error state if there is an error response", async () => {
@@ -63,7 +67,9 @@ describe("<ListView />", () => {
       <ListView {...TEST_PARAMS} />,
       mocksWithError
     );
+    const error = shallow(<Error />);
+
     await updateWrapper(wrapper);
-    expect(wrapper.text()).toContain("Error!");
+    expect(wrapper.html()).toContain(error.html());
   });
 });

@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/react-hooks";
 
 import LocationGrid from "../../components/LocationGrid";
 import Loader from "../../components/Loader";
+import Error from "../Error";
 
 export const GET_RESTAURANT_LIST = gql`
   query getRestaurantList($location: String, $limit: Int, $categories: String) {
@@ -53,10 +54,10 @@ export const ListView: React.FunctionComponent<ListViewProps> = ({
     }
   });
 
-  console.log(loading, error, data);
+  // console.log(loading, error, data);
 
   if (loading) return <Loader />;
-  if (error) return <p>Error!</p>;
+  if (error) return <Error />;
   return (
     <div className="module module__list-view">
       <LocationGrid data={data.search} />

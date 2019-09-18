@@ -19,7 +19,7 @@ export const LoginForm: React.FunctionComponent<LoginFormProps> = ({
     login
   );
   return (
-    <div className="module-login-form">
+    <div className="module__login-form">
       <form onSubmit={handleSubmit} className="login-form">
         <h2 className="login-form__header">"Login" with a Yelp API Key</h2>
         <p>
