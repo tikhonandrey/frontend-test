@@ -130,7 +130,7 @@ export const ListView: React.FunctionComponent<ListViewProps> = ({
           Clear All
         </Button>
       </div>
-      <LocationGrid data={data.search} values={filters} />
+      <LocationGrid list={data.search.business} filters={filters} />
     </div>
   );
 };

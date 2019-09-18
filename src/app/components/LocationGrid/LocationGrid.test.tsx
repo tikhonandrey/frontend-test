@@ -18,7 +18,9 @@ describe("<LocationGridItem />", () => {
 describe("<LocationGrid />", () => {
   it("doesn't blow up", () => {
     const data = mockData.search.business;
-    const wrapper = mount(<LocationGrid list={data} values={FILTER_DEFAULT} />);
+    const wrapper = mount(
+      <LocationGrid list={data} filters={FILTER_DEFAULT} />
+    );
 
     expect(wrapper).toMatchSnapshot();
   });
