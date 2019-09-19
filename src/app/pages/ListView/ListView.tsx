@@ -27,13 +27,6 @@ export const GET_RESTAURANT_LIST = gql`
         price
         categories {
           title
-          parent_categories {
-            title
-          }
-        }
-        coordinates {
-          latitude
-          longitude
         }
         photos
       }
