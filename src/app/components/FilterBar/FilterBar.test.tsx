@@ -103,7 +103,6 @@ describe("<FilterBar />", () => {
       value: {}
     };
     const callback = (name, value) => {
-      console.log(">>>", name);
       result = {
         name,
         value

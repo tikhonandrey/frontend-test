@@ -13,6 +13,10 @@ Kristi Centinaro
 
 ### Prerequisites
 
+- Download and run the CORS proxy docker container (below)
+- Have NVM installed
+- A Yelp API key with beta access to GraphQL
+
 #### Docker CORS proxy server
 
 I used a docker container `cors-proxy`:
@@ -36,6 +40,14 @@ cd demo-app-2019
 nvm install
 npm install && npm start
 ```
+
+The app will start on `localhost:8080`
+
+#### Storybook Docs
+
+`npm run storybook`
+
+Storybook runs on `localhost:9001`
 
 ## Frameworks & Technology Used
 

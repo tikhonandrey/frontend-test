@@ -7,11 +7,14 @@ import { withKnobs, boolean, select } from "@storybook/addon-knobs";
 import mockData from "../../__mocks__/search";
 
 import { ReviewItem } from "./ReviewItem";
-const review = mockData.data.search.business[0].reviews[0];
 
 const stories = storiesOf("Components", module);
 
 stories.add(
   "Review Item",
-  withInfo({ inline: true })(() => <ReviewItem data={review} />)
+  withInfo({ inline: true })(() => {
+    const review = mockData.search.business[0].reviews[0];
+
+    return <ReviewItem data={review} />;
+  })
 );
