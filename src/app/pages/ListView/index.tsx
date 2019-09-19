@@ -1,1 +1,5 @@
-export { ListView as default } from "./ListView";
+export {
+  ListView as default,
+  deriveCategories,
+  deriveOptions
+} from "./ListView";

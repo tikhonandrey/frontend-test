@@ -7,7 +7,10 @@ export const useChangeUpdate = (initialValues: FilterValues) => {
   const [filters, setValue] = React.useState(initialValues);
 
   const onChange = (key: string, result: { name: string; value: boolean }) => {
-    if (!filters[key]) return;
+    // don't process an invalid key
+    if (_.indexOf(Object.keys(FILTER_DEFAULT), key) === -1) {
+      return;
+    }
 
     if (key === "open") {
       return setValue({

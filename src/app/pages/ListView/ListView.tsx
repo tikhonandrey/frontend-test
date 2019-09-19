@@ -67,7 +67,7 @@ export const deriveCategories = (entries: Array<{ categories: Array<{}> }>) => {
   return _.uniq(flat.sort());
 };
 
-export const deriveOptions = (key: string, entries: Array<string>) => {
+export const deriveOptions = (key: string, entries: Array<{}>) => {
   const attrs: Array<string> = _.map(entries, key);
   return _.uniq(attrs.sort());
 };
