@@ -42,9 +42,11 @@ export const FilterBar: React.FunctionComponent<FilterBarProps> = ({
         <OpenToggleInput
           className="filter-bar__open-toggle-input"
           id="open-toggle"
-          name="is-open"
+          name="open"
           checked={values.open}
-          onChange={value => onUpdate("open", value)}
+          onChange={value => {
+            onUpdate("open", value);
+          }}
         />
       </div>
       <div className="filter-bar__inline-input">
@@ -55,7 +57,7 @@ export const FilterBar: React.FunctionComponent<FilterBarProps> = ({
               key={`price-${idx}`}
               id={`price-${idx}`}
               label={price}
-              onChange={value => onUpdate("price", value)}
+              onChange={value => onUpdate("prices", value)}
               checked={_.indexOf(values.prices, price) > -1}
             />
           ))}

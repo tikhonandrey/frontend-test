@@ -14,11 +14,21 @@ export const filterList = (
   list: Array<LocationItemProps>,
   filters: FilterValues
 ) => {
+  console.log(filters);
+
   return _.filter(list, (item: LocationItemProps) => {
-    const isCategory =
-      _.indexOf(filters.categories, item.categories[0].title) > -1;
+    const categoryTitles = _.map(item.categories, "title");
     const isPrice = _.indexOf(filters.prices, item.price) > -1;
     const openState = filters.open === !item.is_closed;
+
+    let isCategory = false;
+
+    _.each(categoryTitles, title => {
+      if (_.indexOf(filters.categories, title) > -1) {
+        isCategory = true;
+      }
+    });
+
     return isCategory && isPrice && openState;
   });
 };
@@ -35,7 +45,7 @@ export const LocationGrid: React.FunctionComponent<LocationGridProps> = ({
 
   React.useEffect(() => {
     updateFilteredList(filterList(list, filters));
-  }, [filters, list]);
+  }, [list, filters]);
 
   if (!filteredList.length) {
     return (

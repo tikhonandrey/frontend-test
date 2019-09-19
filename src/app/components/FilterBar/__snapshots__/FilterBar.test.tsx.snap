@@ -16,7 +16,7 @@ exports[`<FilterBar /> doesn't blow up 1`] = `
       checked={false}
       className="filter-bar__open-toggle-input"
       id="open-toggle"
-      name="is-open"
+      name="open"
       onChange={[Function]}
     />
   </div>

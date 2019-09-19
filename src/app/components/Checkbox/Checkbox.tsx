@@ -57,7 +57,7 @@ export const Checkbox: React.FunctionComponent<CheckboxProps> = ({
         disabled={disabled}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
           toggleChecked(!isChecked);
-          onChange({ name, value: e.target.checked });
+          onChange({ name, value: !isChecked });
         }}
       />
       <label className="checkbox__label" htmlFor={id}>
