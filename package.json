@@ -1,0 +1,56 @@
+{
+  "scripts": {
+    "dev": "run-p babel-server serve webpack",
+    "serve": "nodemon dist/server dist/server/index.js",
+    "babel-server": "babel -w src/server -d dist/server",
+    "webpack": "webpack -w",
+    "live-reload": "browser-sync start --proxy localhost:5000 --files dist/**/* --no-notify",
+    "build": "run-s blast-dist build-client build-server",
+    "blast-dist": "rm -rf dist",
+    "build-server": "babel src/server -d dist/server",
+    "build-client": "webpack",
+    "start": "node dist/server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "normalize.css": "^8.0.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-is": "^16.10.2",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.0.0-beta.9"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.3",
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "browser-sync": "^2.26.7",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^1.19.3",
+    "npm-run-all": "^4.1.5",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "engines": {
+    "node": "10.16.3",
+    "yarn": "1.17.3"
+  },
+  "private": true,
+  "author": "Cory Simmons <csimmonswork@gmail.com> (https://corysimmons.com)"
+}
